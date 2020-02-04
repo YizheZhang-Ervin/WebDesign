@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>FirstHtml with CSS</title>
+    <meta charset="UTF-8" />
+    <link href="{% static 'css/main.css'%}" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Part 1 Home-->
+    <a name="top-part" id="top001"></a>
+    <header>
+      <!--top left button -->
+      <div class="leftfloat">
+        <button type="button" class="buttonC">O O</button>
+      </div>
+      <!--top navigation bar -->
+      <div class="rightfloat">
+        <button
+          onclick="window.location.href= '#top001'"
+          type="button"
+          class="buttonW"
+        >
+          HOME
+        </button>
+        <button
+          onclick="window.location.href= '#about001'"
+          type="button"
+          class="buttonW"
+        >
+          ABOUT US
+        </button>
+        <button
+          onclick="window.location.href= '#service001'"
+          type="button"
+          class="buttonW"
+        >
+          SERVICES
+        </button>
+        <button
+          onclick="window.location.href= '#news001'"
+          type="button"
+          class="buttonW"
+        >
+          NEWS
+        </button>
+        <button
+          onclick="window.location.href= '#resource001'"
+          type="button"
+          class="buttonW"
+        >
+          RESOURCES
+        </button>
+      </div>
+      <div class="clearfloat"></div>
+    </header>
+    <!--first part words -->
+    <div class="p1d">
+      <br /><br /><br /><br /><br />
+      <p class="p1p">Sharing Vitality</p>
+      <p class="p1p"><strong>Through Designing</strong></p>
+      <h4 class="p1h">clean design and advanced digital solutions</h4>
+      <br />
+      <button type="button" class="buttonstyle p1b1">Explore More</button>
+      <button type="button" class="p1b2">See Live Demo</button>
+    </div>
+
+    <br /><br />
+
+    <!--Part 2 About me-->
+    <a name="about-part" id="about001"></a>
+    <div>
+      <!--picture -->
+      <div class="leftfloat p2d1">
+        <img class="p2img" src="{% static 'img/part2.jpg' %}" />
+      </div>
+      <!--sentences -->
+      <div class="rightfloat p2d2">
+        <br /><br /><br /><br />
+        <p class="p2p1 colorG"><strong>About Me</strong></p>
+        <p class="p2p2"><strong>Why hire us for your next project?</strong></p>
+        <p class="p2p3">
+          We are creative director and UI/UX designer from new york, working in
+          web development and print media.We enjoy turning complex problems into
+          simple,beautiful and intuituive designs
+        </p>
+        <p class="p2p3">
+          Our job is to build your website so that it is functional and
+          user-friendly but at the same time attractive
+        </p>
+        <button type="button" class="buttonstyle colorW p2b">
+          Download CV
+        </button>
+      </div>
+      <div class="clearfloat"></div>
+      <!--four cycles -->
+      <div class="p2cirA leftfloat">
+        <div class="p2cir2">
+          <div class="p2cir3"></div>
+        </div>
+        <div class="p2cirtext centertext">
+          <span> 50%</span><br />
+          <span> WEB DESIGN</span>
+        </div>
+      </div>
+
+      <div class="p2cirB leftfloat">
+        <div class="p2cir2">
+          <div class="p2cir3"></div>
+        </div>
+        <div class="p2cirtext centertext">
+          <span> 75%</span><br />
+          <span> development</span>
+        </div>
+      </div>
+
+      <div class="p2cirC leftfloat">
+        <div class="p2cir2">
+          <div class="p2cir3"></div>
+        </div>
+        <div class="p2cirtext centertext">
+          <span> 20% </span><br />
+          <span> web design</span>
+        </div>
+      </div>
+
+      <div class="p2cirD leftfloat">
+        <div class="p2cir2">
+          <div class="p2cir3"></div>
+        </div>
+        <div class="p2cirtext centertext">
+          <span> 50%</span><br />
+          <span> user experience</span>
+        </div>
+      </div>
+
+      <br /><br /><br /><br /><br />
+    </div>
+    <div class="clearfloat"></div>
+    <!--Part 3 My Services-->
+
+    <div class="p3d">
+      <!--2 titles -->
+      <p><span class="p3s1">MY SERVICES</span></p>
+      <p>
+        <b><span class="p4s2">Our Provided Features & Expertise</span></b>
+      </p>
+      <!--6 different pic+words block -->
+      <!--block 1.2 -->
+      <div class="leftfloat p3d1">
+        <img src=" {% static 'img/part3.png' %}" class="p3img" />
+        <p class="p3p1"><b>web design</b></p>
+        <hr class="p3h" />
+        <p class="p3p2">
+          lorem ipsum dolor sit amet,stet clita kasd lorem ipsum dolor sit
+          amet.sed diam eirmod tempor dolore.
+        </p>
+        <br />
+        <button class="p3b colorW">Know More -></button>
+        <br /><br />
+      </div>
+      <a name="service-part" id="service001"></a>
+      <div class="rightfloat p3d2">
+        <p class="p3p5"><b>95%</b></p>
+        <hr color="mediumturquoise" class="p3h2" />
+        <p class="p3p1"><b>web design</b></p>
+        <p class="p3p4">HTML,CSS,jQuery</p>
+      </div>
+      <div class="clearfloat"><br /><br /></div>
+      <!--block 3.4 -->
+      <div class="leftfloat p3d3">
+        <p class="p3p5"><b>85%</b></p>
+        <hr color="mediumturquoise" class="p3h2" />
+        <p class="p3p1"><b>graphic design</b></p>
+        <p class="p3p4">Photoshop,Illustrator</p>
+      </div>
+      <div class="rightfloat p3d4 colorW">
+        <img src=" {% static 'img/part3-2.png' %}" class="p3img2" />
+        <p class="p3p1"><b>graphics design</b></p>
+        <hr class="p3h3" />
+        <p class="p3p2">
+          lorem ipsum dolor sit amet,stet clita kasd lorem ipsum dolor sit
+          amet.sed diam eirmod tempor dolore.
+        </p>
+        <br />
+        <button class="p3b2">Know More -></button>
+        <br /><br />
+      </div>
+
+      <div class="clearfloat"><br /><br /></div>
+      <!--block 5.6 -->
+      <div class="leftfloat p3d6">
+        <img src="{% static 'img/part3.png' %}" class="p3img2" />
+        <p class="p3p1"><b>web development</b></p>
+        <hr class="p3h" />
+        <br />
+        <p class="p3p2">
+          lorem ipsum dolor sit amet,stet clita kasd lorem ipsum dolor sit
+          amet.sed diam eirmod tempor dolore.
+        </p>
+        <br />
+        <button class="p3b">Know More -></button>
+        <br /><br />
+      </div>
+      <div class="rightfloat p3d5">
+        <p class="p3p5"><b>70%</b></p>
+        <hr color="mediumturquoise" class="p3h2" />
+        <p class="p3p1"><b>web development</b></p>
+        <p class="p3p4">HTML,CSS,jQuery</p>
+      </div>
+      <div class="clearfloat"><br /><br /></div>
+      <!--button -->
+      <button class="p3b3 colorW">View More</button>
+      <br /><br /><br />
+    </div>
+    <!--Part 4 Portfolio-->
+    <a name="top-part" id="news001"></a>
+    <div>
+      <!--2 titles -->
+      <p class="centertext"><span class="p4s1">PORTFOLIO</span></p>
+      <p class="centertext">
+        <b><span class="p4s2">My Work Examples</span></b>
+      </p>
+      <!--4 pictures -->
+      <div class="p4d1">
+        <img src="{% static 'img/part4.png' %}" />
+      </div>
+      <div>
+        <img src="{% static 'img/part4-2.png' %}" />
+      </div>
+      <div>
+        <img src="{% static 'img/part4-3.jpg' %}" />
+      </div>
+      <div>
+        <img src="{% static 'img/part4.png' %}" />
+      </div>
+    </div>
+    <div class="clearfloat"><br /><br /></div>
+    <!--button -->
+    <button class="p3b3">View All</button>
+    <!--Part 5 Testimonials-->
+    <a name="service-part" id="resource001"></a>
+    <div>
+      <!--2 titles -->
+      <p class="centertext"><span class="p4s1">TESTIMONIALS</span></p>
+      <p class="centertext">
+        <b><span class="p4s2">What People Says</span></b>
+      </p>
+      <br />
+      <h1 class="centertext colorG">||</h1>
+      <p class="centertext p5p1">
+        lorem ipsum dolor sit amet,stet clita kasd lorem ipsum dolor sit
+        amet.sed diam eirmod tempor dolore.
+      </p>
+      <p class="centertext"><span class="p4s2">John Doe</span></p>
+      <p class="centertext">
+        <b><span class="p4s2">CEO,ABC Company</span></b>
+      </p>
+      <img src="{% static  'img/part5.png' %}" class="p5img" />
+      <br /><br />
+    </div>
+    <!--Part 6 Blog-->
+    <div>
+      <!--2 titles -->
+      <p class="centertext"><span class="p4s1">BLOG</span></p>
+      <p class="centertext">
+        <b><span class="p4s2">Trendy News Feeds</span></b>
+      </p>
+      <!--3 blocks -->
+      <!--block left -->
+      <div class="leftfloat p6d1">
+        <img class="p6img" src="{% static 'img/part6-2.jpg' %}" />
+        <p class="p6p1 colorG"><b>26th Octomber,</b></p>
+        <p class="p6p2">
+          I enjoy turning complex problems into simple,beautiful and intuitive
+          designs.
+        </p>
+        <hr class="p6h1" />
+        <p class="p6p2">lorem ipsum dolor sit amet,stet clita</p>
+        <br />
+        <!--button -->
+        <button class="p6b colorG">Know -></button>
+        <br /><br />
+      </div>
+      <!--block center -->
+      <div class="leftfloat p6d2">
+        <img class="p6img" src="{% static  'img/part6-3.jpg' %}" />
+        <p class="p6p1"><b>26th Octomber,</b></p>
+        <p class="p6p2">
+          I enjoy turning complex problems into simple,beautiful and intuitive
+          designs.
+        </p>
+        <hr class="p6h1" />
+        <p class="p6p2">lorem ipsum dolor sit amet,stet clita</p>
+        <br />
+        <!--button -->
+        <button class="p6b colorG">Know -></button>
+        <br /><br />
+      </div>
+      <!--block right -->
+      <div class="leftfloat p6d2">
+        <img class="p6img" src="{% static 'img/part6.png' %}" />
+        <p class="p6p1"><b>26th Octomber,</b></p>
+        <p class="p6p2">
+          I enjoy turning complex problems into simple,beautiful and intuitive
+          designs.
+        </p>
+        <hr class="p6h1" />
+        <p class="p6p2">lorem ipsum dolor sit amet,stet clita</p>
+        <br />
+        <!--button -->
+        <button class="p6b colorG">Know -></button>
+        <br /><br />
+      </div>
+      <div class="clearfloat">
+        <br />
+      </div>
+      <!--button -->
+      <button class="p6b2 colorW">View All</button>
+      <br /><br /><br /><br /><br /><br />
+    </div>
+
+    <!--Part 7 Contact Me-->
+    <div>
+      <p class="centertext"><span class="p4s1">CONTACT ME</span></p>
+      <p class="centertext">
+        <b><span class="p4s2">Send Us a Message</span></b>
+      </p>
+      <br />
+      <!--form -->
+      <form>
+        <!--Name and email -->
+        <div class="leftfloat p7d1">
+          <p class="p7p">
+            Name : <input placeholder="" type="text" name="name" class="p7i1" />
+          </p>
+        </div>
+        <div class="rightfloat p7d3">
+          <p class="p7p">
+            Email :
+            <input
+              placeholder="xx@xx.xx"
+              type="email"
+              name="email"
+              class="p7i1"
+            />
+          </p>
+        </div>
+
+        <div class="clearfloat">
+          <br />
+        </div>
+        <!--phone and budget -->
+        <div class="leftfloat p7d1">
+          <p class="p7p">
+            Phone# :
+            <input
+              placeholder="digits here"
+              type="tel"
+              name="phone"
+              class="p7i1"
+            />
+          </p>
+        </div>
+
+        <div class="rightfloat p7d3">
+          <p class="p7p">
+            Budget :
+            <input
+              placeholder="click ComboBox to choose"
+              type="number"
+              name="budget"
+              list="bgt"
+              class="p7i1"
+            />
+          </p>
+          <datalist id="bgt">
+            <option value="1,000,000"></option>
+            <option value="5,000,000"></option>
+            <option value="10,000,000"></option>
+          </datalist>
+        </div>
+
+        <div class="clearfloat">
+          <br />
+        </div>
+        <!--message -->
+        <div class="p7d2">
+          <p class="p7p2">
+            Message :
+            <textarea
+              placeholder="please type in message here"
+              type="text"
+              name="message"
+              class="p7t"
+            ></textarea>
+          </p>
+        </div>
+        <br />
+        <!--button -->
+        <div class="centertext">
+          <button formmethod="GET" type="submit" class="p7b colorW">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--Part 8 bottom of page-->
+    <!--anchor -->
+    <div class="p8d1">
+      <img
+        src="{% static 'img/part8.png' %}"
+        class="p8img1"
+        onclick="window.location.href='#top001'"
+      />
+      <a href="#top001"></a>
+    </div>
+
+    <!--content of designer -->
+    <footer>
+      <!--left content -->
+      <div class="leftfloat p8d2">
+        <button type="button" class="p8b1">O O</button>
+        <p class="centertext p8p1">
+          lorem ipsum dolor sit amet,stet clita kasd lorem ipsum dolor sit
+        </p>
+      </div>
+      <!--right content -->
+      <div class="rightfloat p8d3">
+        <!--upper part -->
+        <p class="p8p2">
+          <b
+            >We are digital designer living in United States. Apart from eating
+            burger</b
+          >
+        </p>
+        <!--lower part -->
+        <!--lower-left part-->
+        <div class="leftfloat">
+          <p class="colorG">SEND MAIL</p>
+          <p>Info@portfolio.c</p>
+        </div>
+        <!--lower-center part -->
+        <div class="leftfloat p8d4">
+          <p class="colorG">MAKE CALL</p>
+          <p>+123 456 7890</p>
+        </div>
+        <!--lower-right part -->
+        <div class="leftfloat p8d4">
+          <p class="colorG">GET IN TOUCH</p>
+          <p>123/A,</p>
+        </div>
+      </div>
+
+      <div class="clearfloat"><br /><br /></div>
+      <!--Separator -->
+      <hr class="colorG" />
+      <p class="centertext"><b>2019 All Rights Reserved</b></p>
+    </footer>
+  </body>
+</html>
