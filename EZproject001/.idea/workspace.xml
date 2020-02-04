@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44eed44b-f83d-4817-b1d3-3e07447117f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EZsite001/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/EZsite001/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-05.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-06.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
