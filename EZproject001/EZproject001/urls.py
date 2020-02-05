@@ -21,8 +21,8 @@ from EZsite001 import views
 # name:SA, code:SA
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'EZsite001/index/', views.index),
-    path('home/', views.home),
-    path('blog/', views.blog),
-    path('', views.blog),
+    path('test/', views.test),
+    path('course/', views.course),
+    path('resume/', views.resume),
+    path('', views.resume),
 ]

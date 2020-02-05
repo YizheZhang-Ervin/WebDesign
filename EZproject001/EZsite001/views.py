@@ -2,11 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader, Context, Template
 
-
 # Create your views here.
 
 
-def index(request):
+def test(request):
     # method 1
     t = loader.get_template('index.html')
     return HttpResponse(t.render({'name': 123}))
@@ -19,11 +18,11 @@ def index(request):
     # content of Context directory value can be common value, list, class
 
 
-def home(request):
+def course(request):
     t = loader.get_template('firstHTML.html')
     return HttpResponse(t.render())
 
 
-def blog(request):
+def resume(request):
     t = loader.get_template('blog.html')
     return HttpResponse(t.render())

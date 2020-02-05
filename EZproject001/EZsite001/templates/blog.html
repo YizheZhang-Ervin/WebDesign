@@ -251,6 +251,7 @@ http://www.templatemo.com/tm-505-stacked
                         <div class="col-md-8">
                           <div class="contat-form">
                             <form id="contact" action="" method="post">
+                              {% csrf_token %}
                               <fieldset>
                                 <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
                               </fieldset>
