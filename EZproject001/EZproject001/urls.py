@@ -24,10 +24,10 @@ from EZsite001 import views
 # name:SA, code:SA
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', views.test),
     path('course/', views.course),
     path('resume/', views.resume),
     path('', views.resume),
+    path("test/", views.test),
     path("submit_form/", views.submit_form),
 ]
 
