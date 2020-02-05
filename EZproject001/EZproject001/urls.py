@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from django.views import static
+from django.urls import re_path
+from EZproject001 import settings
 from EZsite001 import views
+
 # admin.autodiscover()
 # name:SA, code:SA
 urlpatterns = [
@@ -26,3 +29,8 @@ urlpatterns = [
     path('resume/', views.resume),
     path('', views.resume),
 ]
+
+if not settings.DEBUG:
+  urlpatterns += [
+      re_path(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT}),
+  ]

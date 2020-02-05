@@ -23,14 +23,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'wxj1e0!5vbx6(8j*@x6_uwh@t*+pqrc$oq_(xfp!!umy_55-!%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ENV = 'production'
-ENV_PROFILE = os.getenv("ENV")
-if ENV_PROFILE == "production":
-    DEBUG = False
-else:
-    DEBUG = True
 
-ALLOWED_HOSTS = ['ervinzhang.pythonanywhere.com']
+# ENV_PROFILE = os.getenv("ENV")
+# if ENV_PROFILE == "production":
+#     DEBUG = False
+# else:
+#     DEBUG = True
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['ervinzhang.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -124,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'produce/static')
 STATICFILES_DIRS = [
     # ("css", os.path.join(STATIC_ROOT, 'css')),
     # ("js", os.path.join(STATIC_ROOT, 'js')),
