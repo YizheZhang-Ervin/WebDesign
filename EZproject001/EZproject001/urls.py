@@ -28,9 +28,10 @@ urlpatterns = [
     path('course/', views.course),
     path('resume/', views.resume),
     path('', views.resume),
+    path("submit_form/", views.submit_form),
 ]
 
 if not settings.DEBUG:
-  urlpatterns += [
-      re_path(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT}),
-  ]
+    urlpatterns += [
+        re_path(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATICFILES_DIRS[0]}),
+    ]

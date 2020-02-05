@@ -1,8 +1,11 @@
+import re
+
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader, Context, Template
 
 # Create your views here.
+from django.template.context_processors import csrf
 
 
 def test(request):
@@ -24,5 +27,19 @@ def course(request):
 
 
 def resume(request):
-    t = loader.get_template('blog.html')
+    t = loader.get_template('resume.html')
     return HttpResponse(t.render())
+
+
+def submit_form(request):
+    name = request.get['name']
+    email = request.get['email']
+    message = request.get['message']
+    return HttpResponse("Succeed!" + name + '\n' + email + '\n' + message)
+
+
+# def get_csrf(request):
+#     # generate csrf and send to front-end
+#     x = csrf(request)
+#     csrf_token = x['csrf_token']
+#     return HttpResponse('{} ; {}'.format(str(re), csrf_token))
