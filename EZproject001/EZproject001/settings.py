@@ -29,7 +29,7 @@ SECRET_KEY = 'wxj1e0!5vbx6(8j*@x6_uwh@t*+pqrc$oq_(xfp!!umy_55-!%'
 # else:
 #     DEBUG = True
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ervinzhang.pythonanywhere.com', '127.0.0.1']
 
@@ -133,8 +133,10 @@ else:
 # email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_SSL = True
-EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'zhang_yz168@qq.com'
-EMAIL_HOST_PASSWORD = 'iuiiueffnagbbhgf'
+# EMAIL_HOST_USER = 'zhang_yz168@qq.com'
+# EMAIL_HOST_PASSWORD = 'iuiiueffnagbbhgf'
+EMAIL_HOST_USER = 'ervinzhang319@gmail.com'
+EMAIL_HOST_PASSWORD = 'qmieirzpldvvsgct'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

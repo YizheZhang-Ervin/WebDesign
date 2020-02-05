@@ -53,7 +53,7 @@ def submit_form(request):
     message = request.session['message']
     res = send_mail(subject='Contact By My website: ' + name + '<' + email + '>',
                     message='Name:'+str(name) + '\n' + 'Email:' + str(email) + '\n' + 'Message:' + str(message),
-                    from_email='zhang_yz168@qq.com', recipient_list=['zhang_yz168@qq.com'],
+                    from_email='ervinzhang319@gmail.com', recipient_list=['ervinzhang319@gmail.com'],
                     fail_silently=False)
     if res == 1:
         statusmessage = "Succeed!"
