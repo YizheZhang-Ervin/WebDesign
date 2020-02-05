@@ -30,7 +30,7 @@ if ENV_PROFILE == "production":
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ervinzhang.pythonanywhere.com']
 
 
 # Application definition
