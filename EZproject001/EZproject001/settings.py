@@ -126,11 +126,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-# if not DEBUG:
-#     STATIC_ROOT = os.path.join(BASE_DIR, 'produce/static')
-STATICFILES_DIRS = [
-    # ("css", os.path.join(STATIC_ROOT, 'css')),
-    # ("js", os.path.join(STATIC_ROOT, 'js')),
-    # ("img", os.path.join(STATIC_ROOT, 'img')),
-    os.path.join(BASE_DIR, 'static'),
-]
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+else:
+    STATICFILES_DIRS = [
+        # ("css", os.path.join(STATIC_ROOT, 'css')),
+        # ("js", os.path.join(STATIC_ROOT, 'js')),
+        # ("img", os.path.join(STATIC_ROOT, 'img')),
+        os.path.join(BASE_DIR, 'static'),
+    ]

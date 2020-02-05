@@ -33,5 +33,5 @@ urlpatterns = [
 
 if not settings.DEBUG:
     urlpatterns += [
-        re_path(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATICFILES_DIRS[0]}),
+        re_path(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT}),
     ]
