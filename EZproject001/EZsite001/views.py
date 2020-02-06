@@ -27,7 +27,7 @@ def test(request):
 
 
 def course(request):
-    t = loader.get_template('firstHTML.html')
+    t = loader.get_template('superHTML.html')
     return HttpResponse(t.render())
 
 

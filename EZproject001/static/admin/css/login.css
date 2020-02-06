@@ -1,7 +1,8 @@
 /* LOGIN FORM */
 
 body.login {
-    background: #f8f8f8;
+    /*background: #f8f8f8;*/
+    background: #B0C4DE;
 }
 
 .login #header {
@@ -23,8 +24,10 @@ body.login {
 }
 
 .login #container {
-    background: #fff;
-    border: 1px solid #eaeaea;
+    background: #E6E6FA;
+    border: 2px solid white;
+    /*background: #fff;
+    border: 1px solid #eaeaea;*/
     border-radius: 4px;
     overflow: hidden;
     width: 28em;

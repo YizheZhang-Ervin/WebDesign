@@ -449,7 +449,8 @@ select[multiple] {
 /* FORM BUTTONS */
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: #79aec8;
+    background: #333366;
+    /*background: #79aec8;*/
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -834,7 +835,8 @@ table#change-history tbody th {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: #417690;
+    background: #333366;
+    /* background:#417690*/
     color: #ffc;
     overflow: hidden;
 }

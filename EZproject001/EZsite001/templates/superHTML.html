@@ -2,20 +2,20 @@
 {% load static %}
 <html>
   <head>
-    <title>FirstHtml with CSS</title>
+    <title>SuperHTML with SCSS</title>
     <meta charset="UTF-8" />
-    <link href="{% static 'home/css/main.css'%}" rel="stylesheet" />
+    <link href="{% static 'acaproject/css/main.css' %} " rel="stylesheet" />
   </head>
   <body>
     <!--Part 1 Home-->
     <a name="top-part" id="top001"></a>
-    <header>
+    <header class="p1grid">
       <!--top left button -->
-      <div class="leftfloat">
+      <div class="p1gridd1">
         <button type="button" class="buttonC">O O</button>
       </div>
       <!--top navigation bar -->
-      <div class="rightfloat">
+      <div class="p1gridd2">
         <button
           onclick="window.location.href= '#top001'"
           type="button"
@@ -52,11 +52,11 @@
           RESOURCES
         </button>
       </div>
-      <div class="clearfloat"></div>
     </header>
+
     <!--first part words -->
     <div class="p1d">
-      <br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br />
       <p class="p1p">Sharing Vitality</p>
       <p class="p1p"><strong>Through Designing</strong></p>
       <h4 class="p1h">clean design and advanced digital solutions</h4>
@@ -69,14 +69,14 @@
 
     <!--Part 2 About me-->
     <a name="about-part" id="about001"></a>
-    <div>
+    <div class="p2grid">
       <!--picture -->
-      <div class="leftfloat p2d1">
-        <img class="p2img" src="{% static 'home/img/part2.jpg' %}" />
+      <div class="p2d1">
+        <object type="image/svg+xml" data="{% static 'acaproject/img/part2.svg' %}"></object>
       </div>
       <!--sentences -->
-      <div class="rightfloat p2d2">
-        <br /><br /><br /><br />
+      <div class="p2d2">
+        <br /><br />
         <p class="p2p1 colorG"><strong>About Me</strong></p>
         <p class="p2p2"><strong>Why hire us for your next project?</strong></p>
         <p class="p2p3">
@@ -92,9 +92,11 @@
           Download CV
         </button>
       </div>
-      <div class="clearfloat"></div>
-      <!--four cycles -->
-      <div class="p2cirA leftfloat">
+    </div>
+
+    <!--four cycles -->
+    <div class="p2cirgrid">
+      <div class="p2cirA">
         <div class="p2cir2">
           <div class="p2cir3"></div>
         </div>
@@ -104,7 +106,7 @@
         </div>
       </div>
 
-      <div class="p2cirB leftfloat">
+      <div class="p2cirB">
         <div class="p2cir2">
           <div class="p2cir3"></div>
         </div>
@@ -114,7 +116,7 @@
         </div>
       </div>
 
-      <div class="p2cirC leftfloat">
+      <div class="p2cirC">
         <div class="p2cir2">
           <div class="p2cir3"></div>
         </div>
@@ -124,7 +126,7 @@
         </div>
       </div>
 
-      <div class="p2cirD leftfloat">
+      <div class="p2cirD">
         <div class="p2cir2">
           <div class="p2cir3"></div>
         </div>
@@ -133,22 +135,28 @@
           <span> user experience</span>
         </div>
       </div>
-
-      <br /><br /><br /><br /><br />
     </div>
+    <br /><br /><br /><br /><br />
+
     <div class="clearfloat"></div>
     <!--Part 3 My Services-->
-
-    <div class="p3d">
+    <div class="p3d0">
       <!--2 titles -->
       <p><span class="p3s1">MY SERVICES</span></p>
       <p>
         <b><span class="p4s2">Our Provided Features & Expertise</span></b>
       </p>
+    </div>
+
+    <div class="p3grid">
       <!--6 different pic+words block -->
       <!--block 1.2 -->
-      <div class="leftfloat p3d1">
-        <img src=" {% static 'home/img/part3.png' %}" class="p3img" />
+      <div class="p3d1">
+        <object
+          class="p3embed"
+          data="{% static 'acaproject/img/part3.svg' %}"
+          type="image/svg+xml"
+        ></object>
         <p class="p3p1"><b>web design</b></p>
         <hr class="p3h" />
         <p class="p3p2">
@@ -160,22 +168,22 @@
         <br /><br />
       </div>
       <a name="service-part" id="service001"></a>
-      <div class="rightfloat p3d2">
+      <div class="p3d2">
         <p class="p3p5"><b>95%</b></p>
         <hr color="mediumturquoise" class="p3h2" />
         <p class="p3p1"><b>web design</b></p>
         <p class="p3p4">HTML,CSS,jQuery</p>
       </div>
-      <div class="clearfloat"><br /><br /></div>
+
       <!--block 3.4 -->
-      <div class="leftfloat p3d3">
+      <div class=" p3d3">
         <p class="p3p5"><b>85%</b></p>
         <hr color="mediumturquoise" class="p3h2" />
         <p class="p3p1"><b>graphic design</b></p>
         <p class="p3p4">Photoshop,Illustrator</p>
       </div>
-      <div class="rightfloat p3d4 colorW">
-        <img src=" {% static 'home/img/part3-2.png' %}" class="p3img2" />
+      <div class=" p3d4 colorW">
+        <embed class="p3embed" src="{% static 'acaproject/img/part3-2.svg' %}" type="image/svg+xml" />
         <p class="p3p1"><b>graphics design</b></p>
         <hr class="p3h3" />
         <p class="p3p2">
@@ -187,10 +195,9 @@
         <br /><br />
       </div>
 
-      <div class="clearfloat"><br /><br /></div>
       <!--block 5.6 -->
-      <div class="leftfloat p3d6">
-        <img src="{% static 'home/img/part3.png' %}" class="p3img2" />
+      <div class="p3d6">
+        <embed class="p3embed" src="{% static 'acaproject/img/part3.svg' %}" type="image/svg+xml" />
         <p class="p3p1"><b>web development</b></p>
         <hr class="p3h" />
         <br />
@@ -202,37 +209,37 @@
         <button class="p3b">Know More -></button>
         <br /><br />
       </div>
-      <div class="rightfloat p3d5">
+      <div class=" p3d5">
         <p class="p3p5"><b>70%</b></p>
         <hr color="mediumturquoise" class="p3h2" />
         <p class="p3p1"><b>web development</b></p>
         <p class="p3p4">HTML,CSS,jQuery</p>
       </div>
-      <div class="clearfloat"><br /><br /></div>
-      <!--button -->
-      <button class="p3b3 colorW">View More</button>
-      <br /><br /><br />
     </div>
+    <!--button -->
+    <br /><br />
+    <button class="p3b3 colorW">View More</button>
+    <br /><br /><br />
     <!--Part 4 Portfolio-->
     <a name="top-part" id="news001"></a>
-    <div>
-      <!--2 titles -->
-      <p class="centertext"><span class="p4s1">PORTFOLIO</span></p>
-      <p class="centertext">
-        <b><span class="p4s2">My Work Examples</span></b>
-      </p>
+    <!--2 titles -->
+    <p class="centertext"><span class="p4s1">PORTFOLIO</span></p>
+    <p class="centertext">
+      <b><span class="p4s2">My Work Examples</span></b>
+    </p>
+    <div class="p4grid">
       <!--4 pictures -->
       <div class="p4d1">
-        <img src="{% static 'home/img/part4.png' %}" />
+        <embed src="{% static 'acaproject/img/part4.svg' %}" type="image/svg+xml" />
       </div>
-      <div>
-        <img src="{% static 'home/img/part4-2.png' %}" />
+      <div class="p4d2">
+        <embed src="{% static 'acaproject/img/part4-4.svg' %}" type="image/svg+xml" />
       </div>
-      <div>
-        <img src="{% static 'home/img/part4-3.jpg' %}" />
+      <div class="p4d3">
+        <embed src="{% static 'acaproject/img/part4-2.svg' %}" type="image/svg+xml" />
       </div>
-      <div>
-        <img src="{% static 'home/img/part4.png' %}" />
+      <div class="p4d4">
+        <embed src="{% static 'acaproject/img/part4-3.svg' %}" type="image/svg+xml" />
       </div>
     </div>
     <div class="clearfloat"><br /><br /></div>
@@ -256,20 +263,25 @@
       <p class="centertext">
         <b><span class="p4s2">CEO,ABC Company</span></b>
       </p>
-      <img src="{% static  'home/img/part5.png' %}" class="p5img" />
-      <br /><br />
     </div>
+    <div class="p5d1">
+      <embed src="{% static 'acaproject/img/part5-1.svg' %}" type="image/svg+xml" />
+      <embed src="{% static 'acaproject/img/part5-3.svg' %}" type="image/svg+xml" />
+      <embed src="{% static 'acaproject/img/part5-2.svg' %}" type="image/svg+xml" />
+    </div>
+    <br /><br />
+
     <!--Part 6 Blog-->
-    <div>
-      <!--2 titles -->
-      <p class="centertext"><span class="p4s1">BLOG</span></p>
-      <p class="centertext">
-        <b><span class="p4s2">Trendy News Feeds</span></b>
-      </p>
+    <!--2 titles -->
+    <p class="centertext"><span class="p4s1">BLOG</span></p>
+    <p class="centertext">
+      <b><span class="p4s2">Trendy News Feeds</span></b>
+    </p>
+    <div class="p6grid">
       <!--3 blocks -->
       <!--block left -->
-      <div class="leftfloat p6d1">
-        <img class="p6img" src="{% static 'home/img/part6-2.jpg' %}" />
+      <div class="p6d1">
+        <embed src="{% static 'acaproject/img/part6-2.svg' %}" type="image/svg+xml" />
         <p class="p6p1 colorG"><b>26th Octomber,</b></p>
         <p class="p6p2">
           I enjoy turning complex problems into simple,beautiful and intuitive
@@ -283,8 +295,8 @@
         <br /><br />
       </div>
       <!--block center -->
-      <div class="leftfloat p6d2">
-        <img class="p6img" src="{% static  'home/img/part6-3.jpg' %}" />
+      <div class="p6d2">
+        <embed src="{% static 'acaproject/img/part6-3.svg' %}" type="image/svg+xml" />
         <p class="p6p1"><b>26th Octomber,</b></p>
         <p class="p6p2">
           I enjoy turning complex problems into simple,beautiful and intuitive
@@ -298,8 +310,8 @@
         <br /><br />
       </div>
       <!--block right -->
-      <div class="leftfloat p6d2">
-        <img class="p6img" src="{% static 'home/img/part6.png' %}" />
+      <div class="p6d3">
+        <embed src="{% static 'acaproject/img/part6.svg' %}" type="image/svg+xml" />
         <p class="p6p1"><b>26th Octomber,</b></p>
         <p class="p6p2">
           I enjoy turning complex problems into simple,beautiful and intuitive
@@ -312,30 +324,29 @@
         <button class="p6b colorG">Know -></button>
         <br /><br />
       </div>
-      <div class="clearfloat">
-        <br />
-      </div>
+      <br />
+
       <!--button -->
       <button class="p6b2 colorW">View All</button>
       <br /><br /><br /><br /><br /><br />
     </div>
 
     <!--Part 7 Contact Me-->
+    <p class="centertext"><span class="p4s1">CONTACT ME</span></p>
+    <p class="centertext">
+      <b><span class="p4s2">Send Us a Message</span></b>
+    </p>
+    <br />
     <div>
-      <p class="centertext"><span class="p4s1">CONTACT ME</span></p>
-      <p class="centertext">
-        <b><span class="p4s2">Send Us a Message</span></b>
-      </p>
-      <br />
       <!--form -->
-      <form>
+      <form class="p7grid">
         <!--Name and email -->
-        <div class="leftfloat p7d1">
+        <div class=" p7d1">
           <p class="p7p">
             Name : <input placeholder="" type="text" name="name" class="p7i1" />
           </p>
         </div>
-        <div class="rightfloat p7d3">
+        <div class=" p7d3">
           <p class="p7p">
             Email :
             <input
@@ -347,11 +358,8 @@
           </p>
         </div>
 
-        <div class="clearfloat">
-          <br />
-        </div>
         <!--phone and budget -->
-        <div class="leftfloat p7d1">
+        <div class=" p7d4">
           <p class="p7p">
             Phone# :
             <input
@@ -363,7 +371,7 @@
           </p>
         </div>
 
-        <div class="rightfloat p7d3">
+        <div class=" p7d5">
           <p class="p7p">
             Budget :
             <input
@@ -381,24 +389,20 @@
           </datalist>
         </div>
 
-        <div class="clearfloat">
-          <br />
-        </div>
         <!--message -->
         <div class="p7d2">
-          <p class="p7p2">
-            Message :
-            <textarea
+          <p class="p7p2">Message :</p>
+          <textarea
               placeholder="please type in message here"
               type="text"
               name="message"
               class="p7t"
-            ></textarea>
-          </p>
+          ></textarea>
+          
         </div>
         <br />
         <!--button -->
-        <div class="centertext">
+        <div class="p7b2">
           <button formmethod="GET" type="submit" class="p7b colorW">
             Send Message
           </button>
@@ -408,25 +412,20 @@
     <!--Part 8 bottom of page-->
     <!--anchor -->
     <div class="p8d1">
-      <img
-        src="{% static 'home/img/part8.png' %}"
-        class="p8img1"
-        onclick="window.location.href='#top001'"
-      />
-      <a href="#top001"></a>
+      <button class="p8b0" onclick="window.location.href='#top001'"></button>
     </div>
 
     <!--content of designer -->
-    <footer>
+    <footer class="p8grid">
       <!--left content -->
-      <div class="leftfloat p8d2">
+      <div class="p8d2">
         <button type="button" class="p8b1">O O</button>
         <p class="centertext p8p1">
           lorem ipsum dolor sit amet,stet clita kasd lorem ipsum dolor sit
         </p>
       </div>
       <!--right content -->
-      <div class="rightfloat p8d3">
+      <div class="p8d3">
         <!--upper part -->
         <p class="p8p2">
           <b
@@ -434,28 +433,30 @@
             burger</b
           >
         </p>
-        <!--lower part -->
-        <!--lower-left part-->
-        <div class="leftfloat">
+      </div>
+      <!--lower part -->
+      <!--lower-left part-->
+      <div class="p8d4 p8grid2">
+        <div class="p8g2d1">
           <p class="colorG">SEND MAIL</p>
           <p>Info@portfolio.c</p>
         </div>
         <!--lower-center part -->
-        <div class="leftfloat p8d4">
+        <div class=" p8g2d2">
           <p class="colorG">MAKE CALL</p>
           <p>+123 456 7890</p>
         </div>
         <!--lower-right part -->
-        <div class="leftfloat p8d4">
+        <div class=" p8g2d3">
           <p class="colorG">GET IN TOUCH</p>
           <p>123/A,</p>
         </div>
       </div>
-
-      <div class="clearfloat"><br /><br /></div>
       <!--Separator -->
-      <hr class="colorG" />
-      <p class="centertext"><b>2019 All Rights Reserved</b></p>
+      <div class="p8sep">
+        <hr class="colorG" />
+        <p class="centertext"><b>2019 All Rights Reserved</b></p>
+      </div>
     </footer>
   </body>
 </html>
