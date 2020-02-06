@@ -52,14 +52,17 @@ def submit_form(request):
     email = request.session['email']
     message = request.session['message']
     res = send_mail(subject='Contact By My website: ' + name + '<' + email + '>',
-                    message='Name:'+str(name) + '\n' + 'Email:' + str(email) + '\n' + 'Message:' + str(message),
+                    message='Name:' + str(name) + '\n' + 'Email:' + str(email) + '\n' + 'Message:' + str(message),
                     from_email='ervinzhang319@gmail.com', recipient_list=['ervinzhang319@gmail.com'],
                     fail_silently=False)
     if res == 1:
         statusmessage = "Succeed!"
+        messages.success(request, statusmessage)
     else:
         statusmessage = "Oops! Something wrong with internet or other reasons"
-    return HttpResponse(statusmessage + name + '\n' + email + '\n' + message)
+    t = loader.get_template('submit_form.html')
+    return HttpResponse(t.render({'status': statusmessage, 'name': name, 'email': email, 'message': message}))
+    # return HttpResponse(statusmessage + name + '\n' + email + '\n' + message)
 
 # get csrf from back-end
 # def get_csrf(request):
