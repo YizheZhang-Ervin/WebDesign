@@ -4,7 +4,13 @@
     <list default="true" id="44eed44b-f83d-4817-b1d3-3e07447117f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EZsite001/templates/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/EZsite001/templates/resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stacked/img/about-image3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-01-old.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-01-old.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-02-old.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-02-old.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-03-old.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-03-old.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/stacked/img/project-item-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stacked/img/project-item-04-old.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
