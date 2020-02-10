@@ -81,3 +81,4 @@ def submit(request):
 def cmd(request):
     t = loader.get_template('cmd.html')
     return HttpResponse(t.render())
+
