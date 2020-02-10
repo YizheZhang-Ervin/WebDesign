@@ -29,7 +29,8 @@ urlpatterns = [
     path('course/', views.course),
     path("submit/", views.submit),
     path('', views.resume_en),
-    path("test/", views.test),
+    path("cmd/", views.cmd),
+    # path("test/", views.test),
 
 ]
 

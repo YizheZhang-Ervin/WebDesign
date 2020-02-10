@@ -76,3 +76,8 @@ def submit(request):
         statusmessage = "Oops! Something wrong with internet or other reasons"
     t = loader.get_template('submit.html')
     return HttpResponse(t.render({'status': statusmessage, 'name': name, 'email': email, 'message': message}))
+
+
+def cmd(request):
+    t = loader.get_template('cmd.html')
+    return HttpResponse(t.render())

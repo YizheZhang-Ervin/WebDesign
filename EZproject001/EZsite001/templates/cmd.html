@@ -1,0 +1,46 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Command Line</title>
+    <link rel="stylesheet" href="{% static 'cmd/cmd.css' %}">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+        $(document).keyup(function(event){
+        if(event.keyCode ==13){
+        $.ajax({
+        type: "POST",
+        url: "/",
+        data: "code="+$("#in").val(),
+        success: function(msg){
+        $("ul").append("<li>"+$("#in").val()+"</li>"); //将输入的输出到界面
+        $("ul").append("<li>"+msg+"</li>"); //获取返回值并输出
+        $("#in").val(""); //清空输入框
+        $("#text").scrollTop($("#text").scrollTop()+32);//滚动条拉到最下面，显示出输入框
+        }
+        });
+        }
+        });
+        $("#in")[0].focus();
+        });
+    </script>
+</head>
+<body>
+<div class="window">
+    <div class="title">
+        <span>Command Line</span>
+    </div>
+    <div id="text">
+        <ul>
+            <li>Microsoft Windows [Version 10.0.18362.592]</li>
+            <li>(c) 2019 Microsoft Corporation. All rights reserved.</li>
+        </ul>
+        <input type="text" name="" id="in">
+    </div>
+</div>
+</body>
+</html>
