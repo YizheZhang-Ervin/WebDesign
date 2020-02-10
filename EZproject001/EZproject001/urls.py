@@ -23,7 +23,7 @@ from EZsite001 import views
 # admin.autodiscover()
 # name:SA, code:SA
 urlpatterns = [
-    path('admin/', admin.site.urls),   # path() is not regex
+    path('admin/', admin.site.urls),  # path() is not regex
     path('resume/.en/', views.resume_en),
     path('resume/.cn/', views.resume_cn),
     path('course/', views.course),

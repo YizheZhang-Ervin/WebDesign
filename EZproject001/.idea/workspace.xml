@@ -6,10 +6,6 @@
       <change beforePath="$PROJECT_DIR$/EZproject001/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EZproject001/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EZsite001/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/EZsite001/templates/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EZsite001/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/EZsite001/templates/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EZsite001/templates/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/EZsite001/templates/resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EZsite001/templates/submit_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EZsite001/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EZsite001/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/EZsite001/templates" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
