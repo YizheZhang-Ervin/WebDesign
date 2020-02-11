@@ -7,9 +7,11 @@ from django.core.mail import send_mail
 # Create your views here.
 from django.template.context_processors import csrf
 
-
 # use 2 ways to test how to use template and pass value
 # content of Context directory value can be common value, list, class
+from EZsite001 import models
+
+
 def test(request):
     # method 1
     # t = loader.get_template('test.html')
@@ -82,3 +84,9 @@ def cmd(request):
     t = loader.get_template('cmd.html')
     return HttpResponse(t.render())
 
+
+def forum(request):
+    # a1 = {'title': 'python basic', 'p1': 'regex'}
+    # models.forum.objects.create(**a1)
+    article = models.forum.objects.get(id=1)
+    return render(request, 'forum.html', {'article': article})
