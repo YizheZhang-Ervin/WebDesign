@@ -93,5 +93,5 @@ def pkb(request):
 
 
 def webDev(request):
-    t = loader.get_template('webDev.html')
+    t = loader.get_template('WebDev.html')
     return HttpResponse(t.render())
