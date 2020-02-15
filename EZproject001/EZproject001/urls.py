@@ -30,7 +30,8 @@ urlpatterns = [
     path("submit/", views.submit),
     path('', views.resume_en),
     path("cmd/", views.cmd),
-    path("pkb/", views.forum),
+    path("pkb/", views.pkb),
+    path("webDev/", views.webDev),
     # path("test/", views.test),
 
 ]

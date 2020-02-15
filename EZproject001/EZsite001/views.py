@@ -85,8 +85,13 @@ def cmd(request):
     return HttpResponse(t.render())
 
 
-def forum(request):
+def pkb(request):
     # a1 = {'title': 'python basic', 'p1': 'regex'}
     # models.forum.objects.create(**a1)
     article = models.forum.objects.get(id=1)
-    return render(request, 'forum.html', {'article': article})
+    return render(request, 'pkb.html', {'article': article})
+
+
+def webDev(request):
+    t = loader.get_template('webDev.html')
+    return HttpResponse(t.render())
