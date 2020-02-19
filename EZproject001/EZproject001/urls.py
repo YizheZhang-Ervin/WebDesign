@@ -32,6 +32,7 @@ urlpatterns = [
     path("cmd/", views.cmd),
     path("pkb/", views.pkb),
     path("webdev/", views.webDev),
+    path("quickatt/", views.quickatt),
     # path("test/", views.test),
 
 ]

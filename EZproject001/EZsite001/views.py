@@ -95,3 +95,8 @@ def pkb(request):
 def webDev(request):
     t = loader.get_template('WebDev.html')
     return HttpResponse(t.render())
+
+
+def quickatt(request):
+    t = loader.get_template('quickatt.html')
+    return HttpResponse(t.render())

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+    <head>
+        <title>Quick-Attempt HTML</title>
+        <script>
+            function gettext(){
+                let txt = document.getElementById('text001');
+                let frm = document.getElementById('frame001');
+                frm.setAttribute("srcdoc",txt.value);
+            }
+        </script>
+    </head>
+
+    <body background="{% static 'forum/bg.png' %}">
+    <div style="color:white;font-size:27px;line-height:20px;">
+        <p><b><i>Quick Attempt of HTML/CSS/JavaScript</i></b></p>
+        <button onclick="gettext()" style="color:orange;background-color:transparent;font-size:20px">Run Code</button>
+    </div>
+        <div style="display:grid;grid-template-columns:49% 49%;grid-template-rows:100%;grid-gap:1%;">
+            <div style="grid-column:0；grid-row:0;height:1000px">
+                <textarea id="text001" style="height:100%;width:100%;background:transparent;color:white;font-size:18px;overflow-y:scroll;overflow-x:auto;"></textarea>
+            </div>
+
+            <div style="grid-column:1；grid-row:0;height:1000px">
+                <iframe id="frame001" style="height:100%;width:100%"></iframe>
+            </div>
+
+        </div>
+    </body>
+
+</html>
