@@ -8,14 +8,22 @@
                 let txt = document.getElementById('text001');
                 let frm = document.getElementById('frame001');
                 frm.setAttribute("srcdoc",txt.value);
+
+            }
+            function settext(){
+                let txt = document.getElementById('text001');
+                txt.value="<!DOCTYPE HTML>\n<html>\n <head>\n  <title></title>\n  <meta charset='utf-8'>\n  <style></style>\n </head>\n <body>\n\n </body>\n</html>";
             }
         </script>
     </head>
 
     <body background="{% static 'forum/bg.png' %}">
-    <div style="color:white;font-size:27px;line-height:20px;">
-        <p><b><i>Quick Attempt of HTML/CSS/JavaScript</i></b></p>
+    <div style="color:white;font-size:27px;line-height:50px;">
+        <a href="/resume/en/" style="color:white;text-decoration:none">
+            <b><i>Quick Attempt of HTML/CSS/JavaScript</i></b>
+        </a><br>
         <button onclick="gettext()" style="color:orange;background-color:transparent;font-size:20px">Run Code</button>
+        <button onclick="settext()" style="color:orange;background-color:transparent;font-size:20px">Reset Code</button>
     </div>
         <div style="display:grid;grid-template-columns:49% 49%;grid-template-rows:100%;grid-gap:1%;">
             <div style="grid-column:0；grid-row:0;height:1000px">
@@ -23,7 +31,7 @@
             </div>
 
             <div style="grid-column:1；grid-row:0;height:1000px">
-                <iframe id="frame001" style="height:100%;width:100%"></iframe>
+                <iframe id="frame001" style="height:100%;width:100%;background:#F5F5DC"></iframe>
             </div>
 
         </div>
