@@ -33,6 +33,7 @@ urlpatterns = [
     path("pkb/", views.pkb),
     path("webdev/", views.webDev),
     path("quickatt/", views.quickatt),
+    path("pythonspec/", views.pythonspec),
     # path("test/", views.test),
 
 ]

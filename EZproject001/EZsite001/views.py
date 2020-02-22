@@ -100,3 +100,8 @@ def webDev(request):
 def quickatt(request):
     t = loader.get_template('quickatt.html')
     return HttpResponse(t.render())
+
+
+def pythonspec(request):
+    t = loader.get_template('PythonSpec.html')
+    return HttpResponse(t.render())
