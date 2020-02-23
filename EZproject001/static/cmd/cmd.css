@@ -3,14 +3,14 @@ body {
 background-image: url(../stacked/img/fourth-bg.png);
 margin:0px;
 padding:0px;
-color:green;
+color:#00FF00;
 font-size:14px;
 }
 
 .window {
-border:6px #ccc outset;
-width:700px;
-height:470px;
+border:4px white outset;
+width:800px;
+height:570px;
 background-color:#000;
 position:absolute;
 top:80px;
@@ -19,14 +19,14 @@ overflow:hidden
 }
 
 .title {
-background-color:#08246B;
+background-color:black;
 padding:2px;
 }
 
 #text {
 background-color:#000;
 border-top:#ccc outset 2px;
-height:450px;
+height:570px;
 overflow-y:scroll;
 }
 
@@ -41,27 +41,25 @@ color:orange;
 background:transparent;
 margin-top:1%;
 margin-left:1%;
-visibility:hidden;
+display:none;
 }
 
 input{
-width: 657px;
+width: 90%;
 background:transparent;
-color:white;
 border:0;
-font-size:16px;
+font-size:14px;
 outline:none;
-margin-left:1%;
-margin-top:1%;
+margin-left:10px;
+margin-top:10px;
 }
 
 textarea {
-margin-left:1%;
-margin-top:1%;
-height:375px;
-width: 657px;
+margin-left:10px;
+margin-top:10px;
+height:455px;
+width: 100%;
 background:transparent;
-color:white;
 border:0;
 font-size:14px;
 outline:none;
