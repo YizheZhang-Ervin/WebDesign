@@ -13,8 +13,8 @@ width:800px;
 height:570px;
 background-color:#000;
 position:absolute;
-top:80px;
-left:100px;
+top:140px;
+left:120px;
 overflow:hidden
 }
 
@@ -24,6 +24,13 @@ padding:2px;
 }
 
 #text {
+background-color:#000;
+border-top:#ccc outset 2px;
+height:570px;
+overflow-y:scroll;
+}
+
+#text2 {
 background-color:#000;
 border-top:#ccc outset 2px;
 height:570px;
@@ -44,13 +51,17 @@ margin-left:1%;
 display:none;
 }
 
-input{
+#input000, #input001{
 width: 90%;
 background:transparent;
 color:#00FF00;
 border:0;
 font-size:14px;
 outline:none;
+}
+
+input{
+width:15px;
 }
 
 textarea {
@@ -63,4 +74,12 @@ background:transparent;
 border:0;
 font-size:14px;
 outline:none;
+}
+
+a{
+margin:1% 1%;
+}
+
+.choice{
+    margin:1% 1%;
 }
