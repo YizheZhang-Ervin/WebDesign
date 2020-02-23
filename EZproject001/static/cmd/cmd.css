@@ -3,7 +3,7 @@ body {
 background-image: url(../stacked/img/fourth-bg.png);
 margin:0px;
 padding:0px;
-color:#fff;
+color:green;
 font-size:14px;
 }
 
@@ -40,7 +40,8 @@ button{
 color:orange;
 background:transparent;
 margin-top:1%;
-margin-left:1%
+margin-left:1%;
+visibility:hidden;
 }
 
 input{
@@ -62,6 +63,6 @@ width: 657px;
 background:transparent;
 color:white;
 border:0;
-font-size:16px;
+font-size:14px;
 outline:none;
 }
