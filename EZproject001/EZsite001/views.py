@@ -86,7 +86,12 @@ def cmd(request):
     elif request.method == "POST":
         input = request.POST.get('input')
         result_eval = lambda x: eval(x)
-        return render(request, 'cmd.html', {'input': input, 'output': result_eval(input)})
+        result_output=""
+        try:
+            result_output = result_eval(input)
+        except Exception:
+            result_output = "please enter correct Python instruction"
+        return render(request, 'cmd.html', {'input': input, 'output': result_output})
 
 
 def pkb(request):
