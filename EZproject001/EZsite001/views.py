@@ -81,8 +81,12 @@ def submit(request):
 
 
 def cmd(request):
-    t = loader.get_template('cmd.html')
-    return HttpResponse(t.render())
+    if request.method == "GET":
+        return render(request, 'cmd.html')
+    elif request.method == "POST":
+        textarea = request.POST.get('textarea')
+        result_eval = lambda x: eval(x)
+        return render(request, 'cmd.html', {'text': result_eval(textarea)})
 
 
 def pkb(request):

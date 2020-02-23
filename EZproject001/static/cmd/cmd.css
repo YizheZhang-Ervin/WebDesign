@@ -1,37 +1,54 @@
 @charset "utf-8";
 body {
-background-image: url(../img/fourth-bg.png);
-
+background-image: url(../stacked/img/fourth-bg.png);
 margin:0px;
 padding:0px;
 color:#fff;
-font:"微软雅黑";
-font-size:14px;}
+font-size:14px;
+}
+
 .window {
 border:6px #ccc outset;
-width:680px;
-height:442px;
+width:700px;
+height:470px;
 background-color:#000;
 position:absolute;
-top:40px;
-left:68px;
-overflow:hidden}
+top:80px;
+left:100px;
+overflow:hidden
+}
+
 .title {
 background-color:#08246B;
-padding:2px;}
+padding:2px;
+}
+
 #text {
 background-color:#000;
 border-top:#ccc outset 2px;
-height:420px;
-overflow-y:scroll;}
+height:450px;
+overflow-y:scroll;
+}
+
 ul {
 margin:0px;
 padding:0px;
-list-style:none;}
-input {
-background-color:#000;
+list-style:none;
+}
+
+button{
+color:orange;
+background:transparent;
+margin-top:1%;
+margin-left:1%
+}
+
+textarea {
+height:375px;
+width: 657px;
+background:transparent;
+color:white;
 border:0;
-color:#fff;
+font-size:16px;
 outline:none;
-/*font-size:12px;*/
-width:100%}
+}
