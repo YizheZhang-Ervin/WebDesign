@@ -43,6 +43,15 @@ margin-top:1%;
 margin-left:1%
 }
 
+input{
+width: 657px;
+background:transparent;
+color:white;
+border:0;
+font-size:16px;
+outline:none;
+}
+
 textarea {
 height:375px;
 width: 657px;
