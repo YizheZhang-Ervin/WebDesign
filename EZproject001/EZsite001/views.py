@@ -86,7 +86,7 @@ def cmd(request):
     elif request.method == "POST":
         input = request.POST.get('input')
         result_eval = lambda x: eval(x)
-        return render(request, 'cmd.html', {'text': result_eval(input)})
+        return render(request, 'cmd.html', {'input': input, 'output': result_eval(input)})
 
 
 def pkb(request):

@@ -22,8 +22,8 @@
         <form action="/cmd/" method="post">
             {% csrf_token %}
             <button type="submit">Run Code</button>
-            <input type="text" name="input">
-            <textarea name="textarea">{{text}}</textarea>
+            <input type="text" name="input" value={{input}}>
+            <textarea readonly="readonly" name="textarea">{{output}}</textarea>
         </form>
     </div>
 
