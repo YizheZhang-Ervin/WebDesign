@@ -101,6 +101,10 @@ def pkb(request):
     return render(request, 'pkb.html', {'article': article})
 
 
+def pfas(request):
+    return render(request, 'pkb.html', {})
+
+
 def webDev(request):
     t = loader.get_template('WebDev.html')
     return HttpResponse(t.render())
