@@ -102,7 +102,7 @@ def pkb(request):
 
 
 def pfas(request):
-    return render(request, 'pkb.html', {})
+    return render(request, 'pfas.html', {})
 
 
 def webDev(request):
