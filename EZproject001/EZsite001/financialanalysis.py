@@ -9,12 +9,16 @@ register_matplotlib_converters()
 
 
 def getorigintime():
-    now = datetime.datetime.now()
-    return now
+    try:
+        now = datetime.datetime.now()
+    except Exception:
+        now = datetime.datetime.now()-1
+    finally:
+        return now
 
 
 def gettime():
-    return datetime.datetime.now().strftime('%Y-%m-%d')
+    return getorigintime().strftime('%Y-%m-%d')
 
 
 def getdata():
