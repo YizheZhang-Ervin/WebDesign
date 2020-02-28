@@ -11,6 +11,8 @@ from django.template.context_processors import csrf
 # content of Context directory value can be common value, list, class
 from EZsite001 import models
 
+import EZsite001.financialanalysis as fa
+
 
 def test(request):
     # method 1
@@ -86,7 +88,7 @@ def cmd(request):
     elif request.method == "POST":
         input = request.POST.get('input')
         result_eval = lambda x: eval(x)
-        result_output=""
+        result_output = ""
         try:
             result_output = result_eval(input)
         except Exception:
@@ -102,7 +104,10 @@ def pkb(request):
 
 
 def pfas(request):
-    return render(request, 'pfas.html', {})
+    status = fa.gethistorydata()
+    localtime = fa.gettime()
+    currentdata = fa.getcurrentdata()
+    return render(request, 'pfas.html', {'localtime': localtime, 'oprice': currentdata[0], 'cprice': currentdata[1], 'hprice': currentdata[2], 'lprice': currentdata[3]})
 
 
 def webDev(request):

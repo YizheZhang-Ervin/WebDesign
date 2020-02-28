@@ -4,10 +4,10 @@
   <head>
     <title>PKB</title>
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" type="text/css" href="{% static 'forum/styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'pfas/pfas.css' %}" />
     <link rel="shortcut icon" href="{% static 'stacked/img/ez.ico' %}"/>
   </head>
-  <body background="{% static 'forum/bg.png' %}">
+  <body background="{% static 'pfas/bg.png' %}">
     <div id="container">
       <div id="header">
         <h1>
@@ -22,37 +22,62 @@
           <p class="p-nav"><strong>Precious Metals</strong></p>
           <hr style="color:#F0F8FF;height:2px;background-color:#F0F8FF;width:80%"/>
           <ul class="ul-nav">
-            <li><a href="">Gold?</a></li>
-            <li><a href="">Silver?</a></li>
-            <li><a href="">Platinum?</a></li>
-            <li><a href="">Ruthenium?</a></li>
-            <li><a href="">Rhodium?</a></li>
-            <li><a href="">Palladium?</a></li>
-            <li><a href="">Osmium?</a></li>
-            <li><a href="">Iridium?</a></li>
+            <li><a href="">Gold</a></li>
+            <li><a href="">Silver</a></li>
+            <li><a href="">Platinum</a></li>
+            <li><a href="">Ruthenium</a></li>
+            <li><a href="">Rhodium</a></li>
+            <li><a href="">Palladium</a></li>
+            <li><a href="">Osmium</a></li>
+            <li><a href="">Iridium</a></li>
           </ul>
         </div>
         <div id="extra">
-          <p class="p-nav"><strong>Main Points</strong></p>
+          <p class="p-nav"><strong>Time-Slicing</strong></p>
           <hr style="color:#F0F8FF;height:2px;background-color:#F0F8FF;width:80%"/>
           <ul class="ul-nav">
-            <li><a href="">Day</a></li>
-            <li><a href="">Week</a></li>
-            <li><a href="">1 Month</a></li>
-            <li><a href="">3 Months</a></li>
-            <li><a href="">6 Months</a></li>
-            <li><a href="">1 Year</a></li>
-            <li><a href="">2 Year</a></li>
-            <li><a href="">5 Year</a></li>
-            <li><a href="">10 Year</a></li>
-            <li><a href="">20 Year</a></li>
-            <li><a href="">50 Year</a></li>
+            <li><a id='day'>Day</a></li>
+            <li><a id="1week">1 Week</a></li>
+            <li><a id="2weeks">2 Weeks</a></li>
+            <li><a id="3weeks">3 Weeks</a></li>
+            <li><a id="1month">1 Month</a></li>
+            <li><a id="2months">2 Months</a></li>
+            <li><a id="3months">3 Months</a></li>
           </ul>
         </div>
-        <div id="wrapper" style="overflow-y:scroll;overflow-x:auto">
+        <div id="wrapper" style="overflow-y:hidden;overflow-x:auto">
           <div id="content">
-
-
+            <embed id="pic1" src="{% static '/pfas/img/1week.png' %}" />
+            <embed id="pic2" src="{% static '/pfas/img/2weeks.png' %}" />
+            <embed id="pic3" src="{% static '/pfas/img/3weeks.png' %}" />
+            <embed id="pic4" src="{% static '/pfas/img/1month.png' %}" />
+            <embed id="pic5" src="{% static '/pfas/img/2months.png' %}" />
+            <embed id="pic6" src="{% static '/pfas/img/3months.png' %}" />
+            <hr style="border:1px dashed #FFD700;width:70%" align="left">
+            <p style="font-size:21px"><b>Today's Gold Prices Here:</b></p>
+            <p style="line-height:40px"><i>(Current Date: {{localtime}})</i></p>
+            <table class="price" width="370px">
+              <tr>
+                <th style="border: 2px outset rgba(255,215,0,0.7);">Type</th>
+                <th style="border: 2px outset rgba(255,215,0,0.7);">Price</th>
+              </tr>
+              <tr>
+                <td>Open&nbsp;Price: </td>
+                <td>{{oprice}} CNY/g</td>
+              </tr>
+              <tr>
+                <td>Close Price: </td>
+                <td>{{cprice}} CNY/g</td>
+              </tr>
+              <tr>
+                <td>High&nbsp;&nbsp;Price: </td>
+                <td>{{hprice}} CNY/g</td>
+              </tr>
+              <tr>
+                <td>Low&nbsp;&nbsp;&nbsp;Price: </td>
+                <td>{{lprice}} CNY/g</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
@@ -60,5 +85,6 @@
         <p style="text-align:right;height:20px">Python Financial Analysis System(PFAS) --Written By Ervin Zhang</p>
       </div>
     </div>
+  <script src="{% static 'pfas/pfas.js' %}"></script>
   </body>
 </html>
