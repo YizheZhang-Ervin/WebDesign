@@ -9,12 +9,8 @@ register_matplotlib_converters()
 
 
 def getorigintime():
-    try:
-        now = datetime.datetime.now()
-    except Exception:
-        now = datetime.datetime.now()-1
-    finally:
-        return now
+    now = datetime.datetime.now()
+    return now
 
 
 def gettime():
@@ -22,16 +18,21 @@ def gettime():
 
 
 def getdata():
-    golddata = quandl.get("SHFE/AUZ2020", authtoken="EDHKCFxMS-fA8rLYvvef", start_date="2019-12-31",
-                          end_date="2020-02-27")
+    golddata = quandl.get("SHFE/AUZ2020", authtoken="EDHKCFxMS-fA8rLYvvef", start_date="2019-11-18",
+                          end_date=gettime())
     return golddata
 
 
 def getcurrentdata():
     golddata = getdata()
     currentdate = gettime()
-    currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low']].values
-    return currentdata.tolist()
+    try:
+        currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low']].values
+    except Exception:
+        currentdate = (getorigintime() - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
+        currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low']].values
+    finally:
+        return currentdata.tolist()
 
 
 def plot_price(time, name):
