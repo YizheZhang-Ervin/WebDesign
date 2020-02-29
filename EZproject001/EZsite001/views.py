@@ -110,7 +110,9 @@ def pfas(request):
     if not os.path.exists(today_file):
         status = fa.gethistorydata()
     currentdata = fa.getcurrentdata()
-    return render(request, 'pfas.html', {'localtime': localtime, 'oprice': currentdata[0], 'cprice': currentdata[1], 'hprice': currentdata[2], 'lprice': currentdata[3]})
+    return render(request, 'pfas.html',
+                  {'localtime': localtime, 'oprice': currentdata[0], 'cprice': currentdata[1], 'hprice': currentdata[2],
+                   'lprice': currentdata[3], 'sprice': currentdata[4]})
 
 
 def webDev(request):

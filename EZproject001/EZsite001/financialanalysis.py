@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from dateutil import tz
 from pandas.plotting import register_matplotlib_converters
 
-
 register_matplotlib_converters()
 
 
@@ -29,10 +28,10 @@ def getcurrentdata():
     golddata = getdata()
     currentdate = gettime()
     try:
-        currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low']].values
+        currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low', 'Settle']].values
     except Exception:
         currentdate = (getorigintime() - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
-        currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low']].values
+        currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low', 'Settle']].values
     finally:
         return currentdata.tolist()
 
@@ -63,7 +62,7 @@ def plot_price(time, name):
     plt.yticks(color='gold')
     plt.legend()
     pwd = os.path.dirname(os.path.dirname(__file__))
-    saveplace = pwd+'/static/pfas/img/'+name+'.png'
+    saveplace = pwd + '/static/pfas/img/' + name + '.png'
     plt.savefig(saveplace, transparent=True)
 
 

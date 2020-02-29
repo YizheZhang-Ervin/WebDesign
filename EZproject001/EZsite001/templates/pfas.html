@@ -55,7 +55,7 @@
             <embed id="pic6" src="{% static '/pfas/img/3months.png' %}" />
             <hr style="border:1px dashed #FFD700;width:70%" align="left">
             <p style="font-size:21px"><b>Today's Gold Prices Here:</b></p>
-            <p style="line-height:40px"><i>(Current Date: {{localtime}})</i></p>
+            <p style="line-height:40px"><i>(Current Date: {{localtime}} - ASIA/SHANGHAI)</i></p>
             <table class="price" width="370px">
               <tr>
                 <th style="border: 2px outset rgba(255,215,0,0.7);">Type</th>
@@ -68,6 +68,10 @@
               <tr>
                 <td>Close Price: </td>
                 <td>{{cprice}} CNY/g</td>
+              </tr>
+              <tr>
+                <td>Settle Price: </td>
+                <td>{{sprice}} CNY/g</td>
               </tr>
               <tr>
                 <td>High&nbsp;&nbsp;Price: </td>
