@@ -39,12 +39,13 @@ def getcurrentdata():
 def plot_price(time, name):
     golddata = getdata()
     currenttime_ymd = str(gettime())
-    data = golddata.loc[str(time):currenttime_ymd, ['Open', 'Close', 'High', 'Low']]
+    data = golddata.loc[str(time):currenttime_ymd, ['Open', 'Close', 'High', 'Low', 'Settle']]
     x = data.index
     y_open = data['Open'].values
     y_close = data['Close'].values
     y_high = data['High'].values
     y_low = data['Low'].values
+    y_settle = data['Settle'].values
     plt.title(name, color='gold', fontsize='large', fontweight='bold')
     plt.figure(dpi=300)
     # border of axis x and y
@@ -57,6 +58,7 @@ def plot_price(time, name):
     plt.plot(x, y_close, label="Close Price")
     plt.plot(x, y_high, label="High Price", ls='--')
     plt.plot(x, y_low, label="Low Price", ls='--')
+    plt.plot(x, y_settle, label="Settle Price")
     # number of axis x and y
     plt.xticks(x, color='gold', rotation='60')
     plt.yticks(color='gold')
@@ -69,7 +71,7 @@ def plot_price(time, name):
 def gethistorydata():
     currenttime = getorigintime()
     # 1 day
-    aweek = (currenttime - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
+    aweek = (currenttime - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
     plot_price(aweek, gettime())
     # 1 week
     aweek = (currenttime - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
@@ -94,4 +96,4 @@ def gethistorydata():
 
 if __name__ == '__main__':
     # pass
-    print(getorigintime())
+    print(gethistorydata())
