@@ -59,8 +59,20 @@ def plot_price(time, name):
     plt.plot(x, y_high, label="High Price", ls='--')
     plt.plot(x, y_low, label="Low Price", ls='--')
     plt.plot(x, y_settle, label="Settle Price")
-    # number of axis x and y
-    plt.xticks(x, color='gold', rotation='60')
+    # change axis value for longer than 1 month
+    if name == '2months' or name == '3months':
+        x_display = []
+        for index, value in enumerate(x):
+            if index % 7 == 0:
+                x_display.append(value.strftime('%m-%d'))
+            else:
+                x_display.append('')
+    else:
+        x_display = []
+        for index, value in enumerate(x):
+            x_display.append(value.strftime('%m-%d'))
+    # axis x and y
+    plt.xticks(x, x_display, color='gold', rotation='45')
     plt.yticks(color='gold')
     plt.legend()
     pwd = os.path.dirname(os.path.dirname(__file__))
