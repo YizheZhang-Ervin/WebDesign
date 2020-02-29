@@ -24,10 +24,10 @@ function init(){
 }
 
 function time(timeperiod){
-    if (timeperiod!='3months-3D' || timeperiod!='Days'){
-        typeofchart.innerHTML = 'Recent ' + timeperiod + ' Trend Chart';
-    }else{
+    if (timeperiod=='3months-3D' || timeperiod=='Days'){
         typeofchart.innerHTML = 'Recent ' + timeperiod + ' Trend & Scatter Chart';
+    }else{
+        typeofchart.innerHTML = 'Recent ' + timeperiod + ' Trend Chart';
     }
 
     if(timeperiod=='1week'){
