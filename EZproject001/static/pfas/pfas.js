@@ -14,13 +14,14 @@ var pic4 = document.getElementById("pic4");
 var pic5 = document.getElementById("pic5");
 var pic6 = document.getElementById("pic6");
 
-
+var typeofchart = document.getElementById("typeofchart");
 
 function init(){
     time("1week");
 }
 
 function time(timeperiod){
+    typeofchart.innerHTML = timeperiod;
     if(timeperiod=='1week'){
         pic1.style.display='inline';
         pic2.style.display='none';
