@@ -21,7 +21,7 @@ function init(){
 }
 
 function time(timeperiod){
-    typeofchart.innerHTML = timeperiod;
+    typeofchart.innerHTML = 'Recent ' + timeperiod + ' Trend Chart';
     if(timeperiod=='1week'){
         pic1.style.display='inline';
         pic2.style.display='none';
