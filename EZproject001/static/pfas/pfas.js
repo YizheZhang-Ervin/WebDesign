@@ -24,7 +24,12 @@ function init(){
 }
 
 function time(timeperiod){
-    typeofchart.innerHTML = 'Recent ' + timeperiod + ' Trend Chart';
+    if (timeperiod!='3months-3D' || timeperiod!='Days'){
+        typeofchart.innerHTML = 'Recent ' + timeperiod + ' Trend Chart';
+    }else{
+        typeofchart.innerHTML = 'Recent ' + timeperiod + ' Trend & Scatter Chart';
+    }
+
     if(timeperiod=='1week'){
         pic1.style.display='inline';
         pic2.style.display='none';
@@ -73,7 +78,7 @@ function time(timeperiod){
         pic5.style.display='none';
         pic1.style.display='none';
         pic7.style.display='none';
-    }else if(timeperiod=='3months-3D' || timeperiod=='day'){
+    }else if(timeperiod=='3months-3D' || timeperiod=='Days'){
         pic7.style.display='inline';
         pic2.style.display='none';
         pic3.style.display='none';
@@ -85,7 +90,7 @@ function time(timeperiod){
 
 }
 
-day.addEventListener("click", function(){ time("day"); });
+day.addEventListener("click", function(){ time("Days"); });
 week1.addEventListener("click", function(){ time("1week"); });
 week2.addEventListener("click", function(){ time("2weeks"); });
 week3.addEventListener("click", function(){ time("3weeks"); });
