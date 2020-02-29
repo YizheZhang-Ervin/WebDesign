@@ -33,10 +33,18 @@ def getcurrentdata():
     try:
         currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low', 'Settle']].values
     except Exception:
-        currentdate = (getorigintime() - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
-        currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low', 'Settle']].values
-    finally:
-        return currentdata.tolist()
+        currentdata = []
+        for i in range(1, 10):
+            currentdate = (getorigintime() - datetime.timedelta(days=i)).strftime('%Y-%m-%d')
+            try:
+                currentdata = golddata.loc[str(currentdate), ['Open', 'Close', 'High', 'Low', 'Settle']].values
+            except Exception:
+                pass
+            if len(currentdata) > 0:
+                break
+        return currentdate, currentdata.tolist()
+    else:
+        return currentdate, currentdata.tolist()
 
 
 def plot_price_trend(time, name):

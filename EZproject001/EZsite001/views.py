@@ -109,9 +109,9 @@ def pfas(request):
     today_file = pwd + '/static/pfas/img/' + localtime + '.png'
     if not os.path.exists(today_file):
         status = fa.gethistorydata()
-    currentdata = fa.getcurrentdata()
+    goldpricedate, currentdata = fa.getcurrentdata()
     return render(request, 'pfas.html',
-                  {'localtime': localtime, 'currentdata': currentdata})
+                  {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata})
 
 
 def webDev(request):
