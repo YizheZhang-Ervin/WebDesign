@@ -111,8 +111,7 @@ def pfas(request):
         status = fa.gethistorydata()
     currentdata = fa.getcurrentdata()
     return render(request, 'pfas.html',
-                  {'localtime': localtime, 'oprice': currentdata[0], 'cprice': currentdata[1], 'hprice': currentdata[2],
-                   'lprice': currentdata[3], 'sprice': currentdata[4]})
+                  {'localtime': localtime, 'currentdata': currentdata})
 
 
 def webDev(request):

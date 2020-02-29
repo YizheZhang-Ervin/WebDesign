@@ -22,14 +22,14 @@
           <p class="p-nav"><strong>Precious Metals</strong></p>
           <hr style="color:#F0F8FF;height:2px;background-color:#F0F8FF;width:80%"/>
           <ul class="ul-nav">
-            <li><a href="">Gold</a></li>
-            <li><a href="">Silver</a></li>
-            <li><a href="">Platinum</a></li>
-            <li><a href="">Ruthenium</a></li>
-            <li><a href="">Rhodium</a></li>
-            <li><a href="">Palladium</a></li>
-            <li><a href="">Osmium</a></li>
-            <li><a href="">Iridium</a></li>
+            <li><a >Gold</a></li>
+            <li><a >Silver</a></li>
+            <li><a >Platinum</a></li>
+            <li><a >Ruthenium</a></li>
+            <li><a >Rhodium</a></li>
+            <li><a >Palladium</a></li>
+            <li><a >Osmium</a></li>
+            <li><a >Iridium</a></li>
           </ul>
         </div>
         <div id="extra">
@@ -43,6 +43,7 @@
             <li><a id="1month">1 Month</a></li>
             <li><a id="2months">2 Months</a></li>
             <li><a id="3months">3 Months</a></li>
+            <li><a id="3months-3D">3 Months(3D)</a></li>
           </ul>
         </div>
         <div id="wrapper" style="overflow-y:hidden;overflow-x:auto">
@@ -54,6 +55,7 @@
             <embed id="pic4" src="{% static '/pfas/img/1month.png' %}" />
             <embed id="pic5" src="{% static '/pfas/img/2months.png' %}" />
             <embed id="pic6" src="{% static '/pfas/img/3months.png' %}" />
+            <embed id="pic7" src="{% static '/pfas/img/allin.png' %}" />
             <hr style="border:1px dashed #FFD700;width:70%" align="left">
             <p style="font-size:21px"><b>Today's Gold Prices Here:</b></p>
             <p style="line-height:40px"><i>(Current Date: {{localtime}} - ASIA/SHANGHAI)</i></p>
@@ -64,23 +66,23 @@
               </tr>
               <tr>
                 <td>Open&nbsp;Price: </td>
-                <td>{{oprice}} CNY/g</td>
+                <td>{{currentdata.0}} CNY/g</td>
               </tr>
               <tr>
                 <td>Close Price: </td>
-                <td>{{cprice}} CNY/g</td>
+                <td>{{currentdata.1}} CNY/g</td>
               </tr>
               <tr>
                 <td>Settle Price: </td>
-                <td>{{sprice}} CNY/g</td>
+                <td>{{currentdata.4}} CNY/g</td>
               </tr>
               <tr>
                 <td>High&nbsp;&nbsp;Price: </td>
-                <td>{{hprice}} CNY/g</td>
+                <td>{{currentdata.2}} CNY/g</td>
               </tr>
               <tr>
                 <td>Low&nbsp;&nbsp;&nbsp;Price: </td>
-                <td>{{lprice}} CNY/g</td>
+                <td>{{currentdata.3}} CNY/g</td>
               </tr>
             </table>
           </div>
