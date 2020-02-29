@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader, Context, Template
 from django.core.mail import send_mail
-
+import os
 # Create your views here.
 from django.template.context_processors import csrf
 
@@ -104,8 +104,11 @@ def pkb(request):
 
 
 def pfas(request):
-    status = fa.gethistorydata()
     localtime = fa.gettime()
+    pwd = os.path.dirname(os.path.dirname(__file__))
+    today_file = pwd + '/static/pfas/img/' + localtime + '.png'
+    if not os.path.exists(today_file):
+        status = fa.gethistorydata()
     currentdata = fa.getcurrentdata()
     return render(request, 'pfas.html', {'localtime': localtime, 'oprice': currentdata[0], 'cprice': currentdata[1], 'hprice': currentdata[2], 'lprice': currentdata[3]})
 

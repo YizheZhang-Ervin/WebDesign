@@ -2,6 +2,7 @@ import datetime
 import os
 import quandl
 import matplotlib.pyplot as plt
+from dateutil import tz
 from pandas.plotting import register_matplotlib_converters
 
 
@@ -9,7 +10,8 @@ register_matplotlib_converters()
 
 
 def getorigintime():
-    now = datetime.datetime.now()
+    tz_sh = tz.gettz('Asia/Shanghai')
+    now = datetime.datetime.now(tz=tz_sh)
     return now
 
 
@@ -67,6 +69,9 @@ def plot_price(time, name):
 
 def gethistorydata():
     currenttime = getorigintime()
+    # 1 day
+    aweek = (currenttime - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
+    plot_price(aweek, gettime())
     # 1 week
     aweek = (currenttime - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
     plot_price(aweek, '1week')
@@ -90,4 +95,4 @@ def gethistorydata():
 
 if __name__ == '__main__':
     # pass
-    print(gethistorydata())
+    print(getorigintime())
