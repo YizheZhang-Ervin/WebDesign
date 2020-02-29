@@ -127,7 +127,7 @@ def plot_3D(name):
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
-    ax.view_init(elev=60, azim=-45)
+    ax.view_init(elev=35, azim=-45)
     plt.xticks(color='gold')
     plt.yticks(color='gold')
     ax.tick_params(axis='z', colors='gold')
