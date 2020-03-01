@@ -200,9 +200,10 @@ def plot_animation(name):
     ani = animation.FuncAnimation(
         fig, animate, init_func=init, interval=80, blit=True, save_count=len(y))
 
-    # pwd = os.path.dirname(os.path.dirname(__file__))
-    # saveplace = pwd + '/static/pfas/img/' + name + '.mp4'
-    # ani.save(saveplace, savefig_kwargs={'transparent': True})
+    pwd = os.path.dirname(os.path.dirname(__file__))
+    saveplace = pwd + '/static/pfas/img/' + name + '.gif'
+    # plt.savefig(saveplace, transparent=True)
+    ani.save(saveplace, savefig_kwargs={'transparent': True}, writer='imagemagick')
     # return ani.to_html5_video()
     return ani.to_jshtml()
 
