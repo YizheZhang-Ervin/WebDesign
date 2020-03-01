@@ -105,9 +105,10 @@ def plot_price_table(time, name):
     ax.spines['right'].set_color('none')
     plt.xticks([])
     plt.yticks([])
-    col_labels = data.index.strftime('%m-%d')
-    row_labels = ['Open', 'Close', 'Settle', 'High', 'Close']
+    col_labels = ['Open', 'Close', 'High', 'Low', 'Settle']
+    row_labels = data.index.strftime('%m-%d')
     table_vals = data.values.tolist()
+    print(table_vals)
     plt.table(cellText=table_vals, rowLabels=row_labels, colLabels=col_labels, loc='center')
     pwd = os.path.dirname(os.path.dirname(__file__))
     saveplace = pwd + '/static/pfas/img/' + name + '.png'
@@ -252,4 +253,8 @@ def gethistorydata():
 if __name__ == '__main__':
     # pass
     # print(gethistorydata())
-    plot_animation('allin_animation')
+    # plot_animation('allin_animation')
+    currenttime = getorigintime()
+    # 1 week table
+    aweek_table = (currenttime - datetime.timedelta(days=6)).strftime('%Y-%m-%d')
+    plot_price_table(aweek_table, gettime())
