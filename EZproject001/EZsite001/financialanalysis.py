@@ -157,12 +157,18 @@ def plot_animation(name):
     data2 = golddata.loc[:, ['High']]
     y = [float(v) for i in data.values.tolist() for v in i]
     x = [i for i in range(len(y))]
-    x1, y1, x2, y2 = x[0], y[0], x[-1], y[-1]
-
-    def yy(x):
-        return (x - x1) / (x2 - x1) * (y2 - y1) + y1
-
-    yyy = [yy(index) for index in x]
+    # moving average for 3 days
+    y_new = [(y[i] + y[i + 1] + y[i + 2]) / 3 if 0 < i < len(y) - 3 else np.NaN for i in range(len(y) - 2)]
+    x_new = [i for i in range(len(y))]
+    x_new.pop(0)
+    x_new.pop(-1)
+    # head-tail line
+    # x1, y1, x2, y2 = x[0], y[0], x[-1], y[-1]
+    # for i in range(len(y)):
+    #     (y[i]+y[i+1]+y[i+2])/3
+    # def yy(x):
+    #     return (x - x1) / (x2 - x1) * (y2 - y1) + y1
+    # yyy = [yy(index) for index in x]
     fig, ax = plt.subplots()
     ax.grid(True)
     ax.set_xlabel('Days')
@@ -170,7 +176,7 @@ def plot_animation(name):
     ax.xaxis.label.set_color('#0028FF')
     ax.yaxis.label.set_color('#0028FF')
     line, = ax.plot(x, y, color='#0028FF', label='Settle Price')
-    line2, = ax.plot(x, yyy, color='#9B6A12', label='Mean Price')
+    line2, = ax.plot(x_new, y_new, color='#9B6A12', label='Moving Average(3days)')
     ax.legend()
     text_pt = plt.text(4, 0.8, '', fontsize=10, color='#0028FF')
     point_ani, = plt.plot(x[0], y[0], "ro", color='#0028FF')
@@ -203,7 +209,7 @@ def plot_animation(name):
         return line, point_ani, text_pt
 
     ani = animation.FuncAnimation(
-        fig, animate, init_func=init, interval=80, blit=True, save_count=len(y))
+        fig, animate, init_func=init, interval=120, blit=True, save_count=len(y))
 
     pwd = os.path.dirname(os.path.dirname(__file__))
     saveplace = pwd + '/static/pfas/img/' + name + '.gif'
