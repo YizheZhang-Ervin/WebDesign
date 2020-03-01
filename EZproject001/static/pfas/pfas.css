@@ -115,6 +115,14 @@ embed{
     height:30%；
 }
 
+#pic8{
+    display:none;
+    width:70%;
+    height:30%;
+    margin-top:7%;
+    margin-left:10%;
+}
+
 .price{
     color:#FFD700;
     background:transparent;

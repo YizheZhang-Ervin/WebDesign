@@ -5,6 +5,8 @@ import numpy as np
 import quandl
 import matplotlib.pyplot as plt
 from dateutil import tz
+from matplotlib import animation
+import mpl_toolkits.mplot3d.axes3d as p3
 from pandas.plotting import register_matplotlib_converters
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -149,6 +151,62 @@ def plot_3D(name):
     # plt.show()
 
 
+def plot_animation(name):
+    golddata = getdata()
+    data = golddata.loc[:, ['Settle']]
+    data2 = golddata.loc[:, ['High']]
+    y = [float(v) for i in data.values.tolist() for v in i]
+    x = [i for i in range(len(y))]
+    x1, y1, x2, y2 = x[0], y[0], x[-1], y[-1]
+
+    def yy(x):
+        return (x - x1) / (x2 - x1) * (y2 - y1) + y1
+
+    yyy = [yy(index) for index in x]
+    fig, ax = plt.subplots()
+    ax.grid(True)
+    line, = ax.plot(x, y, color='gold')
+    line2, = ax.plot(x, yyy, color='#6495ED')
+    text_pt = plt.text(4, 0.8, '', fontsize=10, color='gold')
+    point_ani, = plt.plot(x[0], y[0], "ro")
+
+    ax.spines['top'].set_color('none')
+    ax.spines['bottom'].set_color('gold')
+    ax.spines['left'].set_color('gold')
+    ax.spines['right'].set_color('none')
+    plt.xticks(color='gold')
+    plt.yticks(color='gold')
+    ax1 = plt.gca()
+    ax1.patch.set_facecolor("black")
+    xdata = []
+    ydata = []
+
+    def init():  # only required for blitting to give a clean slate.
+        line.set_ydata(y[0])
+        line.set_xdata(x[0])
+        return line,
+
+    def animate(i):
+        xdata.append(x[i])
+        ydata.append(y[i])
+        line.set_data(xdata, ydata)
+        text_pt.set_position((x[i], y[i]))
+        text_pt.set_text("x=%.3f,\n y=%.3f" % (x[i], y[i]))
+        point_ani.set_data(x[i], y[i])
+        point_ani.set_marker("o")
+        point_ani.set_markersize(5)
+        return line, point_ani, text_pt
+
+    ani = animation.FuncAnimation(
+        fig, animate, init_func=init, interval=80, blit=True, save_count=len(y))
+
+    # pwd = os.path.dirname(os.path.dirname(__file__))
+    # saveplace = pwd + '/static/pfas/img/' + name + '.mp4'
+    # ani.save(saveplace, savefig_kwargs={'transparent': True})
+    # return ani.to_html5_video()
+    return ani.to_jshtml()
+
+
 def gethistorydata():
     currenttime = getorigintime()
     # 1 week table
@@ -174,10 +232,11 @@ def gethistorydata():
     plot_price_trend(threemonths, '3months')
     # All data 3D
     plot_3D('allin')
+    plot_animation('allin_animation')
     return "success"
 
 
 if __name__ == '__main__':
-    # pass
-    print(gethistorydata())
-
+    pass
+    # print(gethistorydata())
+    plot_animation('allin-ani')

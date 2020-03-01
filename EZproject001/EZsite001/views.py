@@ -12,6 +12,7 @@ from django.template.context_processors import csrf
 from EZsite001 import models
 
 import EZsite001.financialanalysis as fa
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 
 def test(request):
@@ -103,6 +104,7 @@ def pkb(request):
     return render(request, 'pkb.html', {'article': article})
 
 
+@xframe_options_exempt
 def pfas(request):
     localtime = fa.gettime()
     pwd = os.path.dirname(os.path.dirname(__file__))
@@ -110,8 +112,9 @@ def pfas(request):
     if not os.path.exists(today_file):
         status = fa.gethistorydata()
     goldpricedate, currentdata = fa.getcurrentdata()
+    animation = fa.plot_animation('allin_animation')
     return render(request, 'pfas.html',
-                  {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata})
+                  {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata, 'animation':animation})
 
 
 def webDev(request):
