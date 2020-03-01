@@ -96,7 +96,7 @@ function time(timeperiod){
         pic6.style.display='none';
         pic8.style.display='none';
     }else if(timeperiod=='3months-Animation'){
-        pic8.style.display='block';
+        pic8.style.display='inline';
         pic2.style.display='none';
         pic3.style.display='none';
         pic4.style.display='none';

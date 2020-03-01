@@ -165,19 +165,19 @@ def plot_animation(name):
     yyy = [yy(index) for index in x]
     fig, ax = plt.subplots()
     ax.grid(True)
-    line, = ax.plot(x, y, color='gold')
+    line, = ax.plot(x, y, color='#0028FF')
     line2, = ax.plot(x, yyy, color='#6495ED')
-    text_pt = plt.text(4, 0.8, '', fontsize=10, color='gold')
+    text_pt = plt.text(4, 0.8, '', fontsize=10, color='#0028FF')
     point_ani, = plt.plot(x[0], y[0], "ro")
 
     ax.spines['top'].set_color('none')
-    ax.spines['bottom'].set_color('gold')
-    ax.spines['left'].set_color('gold')
+    ax.spines['bottom'].set_color('#0028FF')
+    ax.spines['left'].set_color('#0028FF')
     ax.spines['right'].set_color('none')
-    plt.xticks(color='gold')
-    plt.yticks(color='gold')
+    plt.xticks(color='#0028FF')
+    plt.yticks(color='#0028FF')
     ax1 = plt.gca()
-    ax1.patch.set_facecolor("black")
+    # ax1.patch.set_facecolor("black")
     xdata = []
     ydata = []
 
@@ -232,7 +232,8 @@ def gethistorydata():
     threemonths = (currenttime - datetime.timedelta(days=90)).strftime('%Y-%m-%d')
     plot_price_trend(threemonths, '3months')
     # All data 3D
-    plot_3D('allin')
+    plot_3D('allin_3D')
+    # All data Animation
     plot_animation('allin_animation')
     return "success"
 
@@ -240,4 +241,4 @@ def gethistorydata():
 if __name__ == '__main__':
     pass
     # print(gethistorydata())
-    plot_animation('allin-ani')
+    # plot_animation('allin_animation')

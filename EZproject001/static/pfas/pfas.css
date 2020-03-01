@@ -112,15 +112,15 @@ div#content {
 embed{
     display:none;
     width:70%;
-    height:30%；
+    height:30%;
 }
 
 #pic8{
     display:none;
-    width:70%;
-    height:30%;
     margin-top:7%;
-    margin-left:10%;
+    margin-left:5%;
+    filter:invert(1);
+    width:50%;
 }
 
 .price{

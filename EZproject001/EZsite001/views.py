@@ -112,9 +112,8 @@ def pfas(request):
     if not os.path.exists(today_file):
         status = fa.gethistorydata()
     goldpricedate, currentdata = fa.getcurrentdata()
-    animation = fa.plot_animation('allin_animation')
     return render(request, 'pfas.html',
-                  {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata, 'animation':animation})
+                  {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata})
 
 
 def webDev(request):
