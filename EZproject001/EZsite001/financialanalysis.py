@@ -165,10 +165,15 @@ def plot_animation(name):
     yyy = [yy(index) for index in x]
     fig, ax = plt.subplots()
     ax.grid(True)
-    line, = ax.plot(x, y, color='#0028FF')
-    line2, = ax.plot(x, yyy, color='#6495ED')
+    ax.set_xlabel('Days')
+    ax.set_ylabel('Settle Price')
+    ax.xaxis.label.set_color('#0028FF')
+    ax.yaxis.label.set_color('#0028FF')
+    line, = ax.plot(x, y, color='#0028FF', label='Settle Price')
+    line2, = ax.plot(x, yyy, color='#9B6A12', label='Mean Price')
+    ax.legend()
     text_pt = plt.text(4, 0.8, '', fontsize=10, color='#0028FF')
-    point_ani, = plt.plot(x[0], y[0], "ro")
+    point_ani, = plt.plot(x[0], y[0], "ro", color='#0028FF')
 
     ax.spines['top'].set_color('none')
     ax.spines['bottom'].set_color('#0028FF')
@@ -202,10 +207,10 @@ def plot_animation(name):
 
     pwd = os.path.dirname(os.path.dirname(__file__))
     saveplace = pwd + '/static/pfas/img/' + name + '.gif'
-    # plt.savefig(saveplace, transparent=True)
     ani.save(saveplace, savefig_kwargs={'transparent': True}, writer='imagemagick')
+    # plt.savefig(saveplace, transparent=True)
     # return ani.to_html5_video()
-    return ani.to_jshtml()
+    # return ani.to_jshtml()
 
 
 def gethistorydata():
@@ -239,6 +244,6 @@ def gethistorydata():
 
 
 if __name__ == '__main__':
-    pass
+    # pass
     # print(gethistorydata())
-    # plot_animation('allin_animation')
+    plot_animation('allin_animation')

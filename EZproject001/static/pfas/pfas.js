@@ -22,7 +22,7 @@ var pic8 = document.getElementById("pic8");
 var typeofchart = document.getElementById("typeofchart");
 
 function init(){
-    time("1week");
+    time("Days");
 }
 
 function time(timeperiod){
