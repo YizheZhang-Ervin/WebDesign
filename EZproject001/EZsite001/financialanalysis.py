@@ -1,5 +1,7 @@
+import base64
 import datetime
 import os
+from io import BytesIO
 
 import numpy as np
 import quandl
@@ -91,6 +93,12 @@ def plot_price_trend(time, name):
     pwd = os.path.dirname(os.path.dirname(__file__))
     saveplace = pwd + '/static/pfas/img/' + name + '.png'
     plt.savefig(saveplace, transparent=True)
+    # use ascii save and load png
+    # put this in html :<embed id="pic0" src="data:image/png;base64,{{pic_1}}" />
+    # buf = BytesIO()
+    # plt.savefig(buf, transparent=True, format='png')
+    # data = base64.b64encode(buf.getbuffer()).decode("ascii")
+    # return data
 
 
 def plot_price_table(time, name):
