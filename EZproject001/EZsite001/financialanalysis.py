@@ -262,11 +262,4 @@ def gethistorydata():
 
 
 if __name__ == '__main__':
-    # pass
-    # print(gethistorydata())
-    plot_animation('allin_animation')
-
-    # # 1 week table
-    # currenttime = getorigintime()
-    # aweek_table = (currenttime - datetime.timedelta(days=6)).strftime('%Y-%m-%d')
-    # plot_price_table(aweek_table, gettime())
+    gethistorydata()
