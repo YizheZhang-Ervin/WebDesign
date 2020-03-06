@@ -1,0 +1,493 @@
+<!doctype html>
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><! <html class="no-js" lang=""> <![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Blog-EZ</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="{% static 'stacked/img/ez.ico' %}"/>
+
+        <link rel="stylesheet" href="{% static 'stacked/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'stacked/css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'stacked/css/templatemo-style.css' %}">
+
+        <script src="{% static 'stacked/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    </head>
+    <body>
+        <nav class="nav">
+          <div class="burger">
+            <div class="burger__patty"></div>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#1" class="nav__link c-blue"><img title="Summary" src="{% static 'stacked/img/home-icon.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="#2" class="nav__link c-yellow scrolly"><img title="About Me" src="{% static 'stacked/img/about-icon.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="#3" class="nav__link c-red"><img title="Gallery" src="{% static 'stacked/img/projects-icon.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="#4" class="nav__link c-green"><img title="Contact Me" src="{% static 'stacked/img/contact-icon.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="/resume/cn/" class="nav__link c-blue"><img title="click for chinese version(中文版)" src="{% static 'stacked/img/cn.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="/pfas/" target="_blank" class="nav__link c-blue"><img title="Python Financial Analysis System" src="{% static 'stacked/img/pfas.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="/pkb/" target="_blank" class="nav__link c-blue"><img title="Python Knowledge Base" src="{% static 'stacked/img/pkb.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="/cmd/" target="_blank" class="nav__link c-blue"><img title="CMD for Python" src="{% static 'stacked/img/cmd.png' %}" alt=""></a>
+            </li>
+            <li class="nav__item">
+              <a href="/quickatt/" target="_blank" class="nav__link c-blue"><img title="Quick-Attempt" src="{% static 'stacked/img/quickatt.png' %}" alt=""></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- summary -->
+        <section class="panel b-blue" id="1">
+          <article class="panel__wrapper">
+            <div class="panel__content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="home-content">
+                      <div class="home-heading">
+                        <h1><em>ZHANG</em>Yi Zhe</h1>
+                        <a href="#4" style="font-size:19px;text-transform:none;">English Name: Ervin Zhang</a>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="home-box-content">
+                            <div class="left-text">
+                              <h4><em>Summary</em></h4>
+                              <p>Software engineer enthusiast with years of learning experience in system design, development, and innovation. Proficient in both Front-end/Back-end web technologies and software design process.<br>Quick learner, proactive, adaptable, organized and a team player is seeking a Full-Stack Engineer Co-op (Intern) to utilize my technical and interpersonal skills.</p>
+                              <div class="primary-button">
+                                <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">Linkedin >></a>
+                              </div>
+                            </div>
+                            <div class="right-image">
+                              <img src="{% static 'stacked/img/right-home-image.png' %}" alt="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- skills -->
+        <section class="panel b-yellow" id="2">
+          <article class="panel__wrapper">
+            <div class="panel__content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="about-content">
+                      <div class="heading">
+                        <h4>About me</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="about-box-content">
+                            <img src="{% static 'stacked/img/about-image.png' %}" alt="">
+                          </div>
+                        </div>
+                        <div class="col-md-7 col-md-offset-5">
+                          <div class="about-box-text">
+                            <h4>Technical Skills</h4>
+                            <details style="margin:0 auto " open><summary><b>Programming Languages</b></summary><a target="_blank" href="/pythonspec/">Python</a>, Java, SQL</details>
+                            <details style="margin:0 auto " open><summary><b>Web Technologies</b></summary>HTML/CSS, HTML5/CSS3, SCSS, Django, Tornado, JavaScript (AngularJS, NodeJS, RxJS), Webpack, Axure RP</details>
+                            <details style="margin:0 auto " open><summary><b>Databases</b></summary>MS SQL Server, Oracle, MySQL, SQLite, MongoDB, Redis</details>
+                            <details style="margin:0 auto " open><summary><b>Operation Systems</b></summary>Windows, Linux (Ubuntu, CentOS)</details>
+                            <details style="margin:0 auto " open><summary><b>BI Tools</b></summary>Power BI, SSIS/SSAS/SSRS, SPSS, R, Data Warehousing</details>
+                            <details style="margin:0 auto " open><summary><b>Other Tools</b></summary>Office Word/Excel/PPT/VISIO, Git</details>
+                            <br/>
+                            <div class="primary-button">
+                              <a target="_blank" href="/webdev/">Full Stack >></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- education -->
+        <section class="panel b-red" id="3">
+          <article class="panel__wrapper">
+            <div class="panel__content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="projects-content">
+                      <div class="heading">
+                        <h4>Education</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="owl-carousel owl-theme projects-container">
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-01.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-01.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>2019-Now</h4>
+                                  <p><b>Northeastern University,<br /> Boston, MA</b></p>
+                                  <p>Master of Science in Information Systems</p>
+                                  <br><br>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="https://www.northeastern.edu/">GPA: 3.7/4 </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-02.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-02.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>2017</h4>
+                                  <p><b>University of California,<br/> Los Angeles, CA </b></p>
+                                  <p>Certificate of International Business & Leadership Management</p>
+                                  <br><br>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.ucla.edu/">Team Work</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-03.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-03.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>2015-2019</h4>
+                                  <p><b>Nantong University, </b><br /><b>Nantong, Jiangsu, China</b></p>
+                                  <p>Bachelor of Management in Information Management and Information System</p>
+                                  <br>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.ntu.edu.cn/">Scholarships</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-05-old.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-05-old.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>And More</h4>
+                                  <p>......</p>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">Discover More</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- projects -->
+        <section class="panel b-red" id="3-2">
+          <article class="panel__wrapper">
+            <div class="panel__content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="projects-content">
+                      <div class="heading">
+                        <h4>Projects</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="owl-carousel owl-theme projects-container">
+                            <!--project 7-->
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/course.png' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/bea-gas.png' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>BEA-GAS</h4>
+                                  <p><b>Gold Analysis System(Mar 2020 - Present) - Tornado</b></p>
+                                  <p>$ Analyzed short-term gold data with Moving average / exponential smoothing directly via Quandl API</p>
+                                  <p>$ ETL gold data(2008-Now) and stored in Mysql for long term investment model  </p>
+                                  <p>$ Plotted gold data in form of 2D/3D/Animation/DIY Trend Chart</p>
+                                  <p>$ Extended the core part of Python Financial Analysis System and improved efficiency by Asynchronous server</p>
+                                  <br/><br/>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="https://github.com/YizheZhang-Ervin/BEA">Web Link>></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--project 6-->
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/course.png' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/pfas_project.png' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>PFAS</h4>
+                                  <p><b>Personal Website with embedded PFAS(Feb 2020 - Present) - Django</b></p>
+                                  <p>$ Created Django personal website, and embedded Python Financial Analysis System which plots the gold price trend in different forms</p>
+                                  <p>$ Built exquisite user interface & front-end by bootstrap, html/css, javascript</p>
+                                  <p>$ Deployed on <a href="/">https://ervinzhang.pythonanywhere.com/</a> with Mysql by Pythonanywhere Server platform</p>
+                                  <br/><br/>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="/pfas/">Web Link>></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--project 5-->
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/course.png' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/course.png' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>SPA</h4>
+                                  <p><b>Sample Single Page Application(Jan 2020 - Present)</b></p>
+                                  <p>$ Designed single page web with HTML,CSS,Javascript </p>
+                                  <p>$ Dynamically updated page by JS when users interact with the application</p>
+                                  <br/><br/>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="/course/">Interface Design</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--project 4-->
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-04.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-04.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>HDS</h4>
+                                  <p><b>Hotel Database System(Sept 2019 - Dec 2019)</b></p>
+                                  <p>$ Developed GUI and database with 18 entities for processing and storing customers’ information and behavior</p>
+                                  <p>$ Analyzed customers’ preference by Power BI in order to improve hotel service (room type, meal service,etc)</p>
+
+                                  <div class="primary-button">
+                                    <a target="_blank" href="https://github.com/YizheZhang-Ervin/DesktopAppDevelop">Full Marks</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--project 3-->
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-05.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-05.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>HIS</h4>
+                                  <p><b>Hospital Information System(Sept 2019 - Dec 2019)</b></p>
+                                  <p>$ Developed a system for interaction between medicine suppliers, hospitals, patients and medical insurance bureaus</p>
+                                  <br/><br/><br/><br/>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="https://github.com/YizheZhang-Ervin/DesktopAppDevelop">Superb Work Flows</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--project 2-->
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-06.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-06.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>GUESS</h4>
+                                  <p><b>Gamification Used by Exploratory Search System<br/>(Sept 2018 - Jun 2019) </b></p>
+                                  <p>$ Completed an Excellent Research Essay & initiated Prototype-GUESS  with 11 game modules embedded in 20 visual interfaces in order to improve users' utilization of an exploratory search system</p>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">Grade-A Design Paper</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--project 1-->
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-07.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-07.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>And More</h4>
+                                  <p>Github: YizheZhang-Ervin</p>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="https://github.com/YizheZhang-Ervin">Discover More</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- certificates -->
+        <section class="panel b-red" id="3-3">
+          <article class="panel__wrapper">
+            <div class="panel__content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="projects-content">
+                      <div class="heading">
+                        <h4>Certificates</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="owl-carousel owl-theme projects-container">
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/cer1.png' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/cer1.png' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>Python 3</h4>
+                                  <p><b>SoloLearn<br/>(Issued 27 December, 2019)</b></p>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">Discover More</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/cer2.png' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/cer2.png' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>BI Developer</h4>
+                                  <p><b>Udemy<br/>(Issued 8 November,2019)</b></p>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">Discover More</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/cer3.png' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/cer3.png' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>JavaScript</h4>
+                                  <p><b>SoloLearn<br/>(Issued 27 December, 2019)</b></p>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">Discover More</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="project-item">
+                                <a href="{% static 'stacked/img/project-item-07.jpg' %}" data-lightbox="image-1"><img src="{% static 'stacked/img/project-item-07.jpg' %}" alt=""></a>
+                                <div class="text-content">
+                                  <h4>And More</h4>
+                                  <p>......</p>
+                                  <div class="primary-button">
+                                    <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">Discover More</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- contact me-->
+        <section class="panel b-green" id="4">
+          <article class="panel__wrapper">
+            <div class="panel__content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="contact-content">
+                      <div class="heading">
+                        <h4>Contact me</h4>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-8">
+                          <div class="contat-form">
+                            <form id="contact" action="/resume/en/" method="post" >
+                              {% csrf_token %}
+                              <fieldset>
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
+                              </fieldset>
+                              <fieldset>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+                              </fieldset>
+                              <fieldset>
+                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required></textarea>
+                              </fieldset>
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="btn">Send Message</button>
+                              </fieldset>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="more-info">
+                            <p>Ervin(Yizhe) Zhang
+                              <br><br>
+                            <em><a style="color:" target="_blank" href="mailto:zhang.yizhe@husky.neu.edu?subject=Please%20type%20in%20the%20subject">zhang.yizhe@husky.neu.edu</a>
+                              <br>
+                              <a target="_blank" href="http://www.linkedin.com/in/yizhe-zhang">www.linkedin.com/in/yizhe-zhang</a>
+                              <a target="_blank" href="https://github.com/YizheZhang-Ervin">github.com/YizheZhang-Ervin</a>
+                            </em></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="footer">
+                      <p>Ervin Zhang | <a style="color:" target="_blank" href="mailto:zhang.yizhe@husky.neu.edu?subject=Please%20type%20in%20the%20subject">zhang.yizhe@husky.neu.edu</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{% static 'stacked/js/vendor/jquery-1.11.2.min.js' %} "><\/script>')</script>
+
+        <script src="{% static 'stacked/js/vendor/bootstrap.min.js' %}"></script>
+
+        <script src="{% static 'stacked/js/plugins.js' %}"></script>
+        <script src="{% static 'stacked/js/main.js' %} "></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
