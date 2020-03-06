@@ -15,7 +15,7 @@ import EZsite001.financialanalysis as fa
 from django.views.decorators.clickjacking import xframe_options_exempt
 
 
-def test(request):
+def index(request):
     # method 1
     # t = loader.get_template('test.html')
     # return HttpResponse(t.render({'name': 123}))
@@ -25,7 +25,7 @@ def test(request):
     # c = Context({'name': 123})
     # return HttpResponse(t.render(c))
 
-    t = loader.get_template('test.html')
+    t = loader.get_template('index.html')
     return HttpResponse(t.render())
 
 

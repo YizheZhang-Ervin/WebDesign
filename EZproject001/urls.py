@@ -28,14 +28,13 @@ urlpatterns = [
     path('resume/cn/', views.resume_cn),
     path('course/', views.course),
     path("submit/", views.submit),
-    path('', views.resume_en),
+    path('', views.index),
     path("cmd/", views.cmd),
     path("pkb/", views.pkb),
     path("pfas/", views.pfas),
     path("webdev/", views.webDev),
     path("quickatt/", views.quickatt),
     path("pythonspec/", views.pythonspec),
-    # path("test/", views.test),
 
 ]
 
