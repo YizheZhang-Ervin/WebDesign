@@ -1,0 +1,15 @@
+.left-text li{
+    color:white;font-size:15px;line-height:24px;list-style:none;
+}
+
+.pi{
+    margin-bottom:5px;margin-top:0px;color:rgba(255,255,255,0.7);font-size:13px;
+}
+
+.pt{
+    color:rgba(255,255,255,0.3);font-size:15px;margin-bottom:0px;margin-top:15px;
+}
+
+.ws{
+    color:rgba(255,255,255,0.9);font-size:13px;line-height:30px
+}

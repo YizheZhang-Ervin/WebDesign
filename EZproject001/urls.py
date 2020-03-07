@@ -22,20 +22,20 @@ from EZsite001 import views
 
 # admin.autodiscover()
 # name:SA, code:SA
+# path() is not regex
 urlpatterns = [
-    path('admin/', admin.site.urls),  # path() is not regex
+    path("pythonspec/", views.pythonspec),
     path('resume/en/', views.resume_en),
     path('resume/cn/', views.resume_cn),
+    path("quickatt/", views.quickatt),
+    path('admin/', admin.site.urls),
+    path("webdev/", views.webDev),
     path('course/', views.course),
     path("submit/", views.submit),
-    path('', views.index),
-    path("cmd/", views.cmd),
-    path("pkb/", views.pkb),
     path("pfas/", views.pfas),
-    path("webdev/", views.webDev),
-    path("quickatt/", views.quickatt),
-    path("pythonspec/", views.pythonspec),
-
+    path("pkb/", views.pkb),
+    path("cmd/", views.cmd),
+    path('', views.index),
 ]
 
 if not settings.DEBUG:
