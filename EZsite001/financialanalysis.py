@@ -117,7 +117,7 @@ def plot_price_table(time, name):
     row_labels = data.index.strftime('%m-%d')
     table_vals = data.values.tolist()
     cc_col = ['none' for i in range(len(col_labels))]
-    cc = [cc_col, cc_col, cc_col, cc_col]
+    cc = ['none' for i in range(len(row_labels))]
     cc_row = ['none', 'none', 'none', 'none', 'none']
     plt.table(cellText=table_vals, rowLabels=row_labels, colLabels=col_labels, loc='center', cellColours=cc,
               rowColours=cc_row, colColours=cc_col)
