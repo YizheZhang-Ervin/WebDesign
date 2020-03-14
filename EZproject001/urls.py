@@ -27,14 +27,11 @@ urlpatterns = [
     path("pythonspec/", views.pythonspec),
     path('resume/en/', views.resume_en),
     path('resume/cn/', views.resume_cn),
-    path("quickatt/", views.quickatt),
     path('admin/', admin.site.urls),
     path("webdev/", views.webDev),
     path('course/', views.course),
     path("submit/", views.submit),
     path("pfas/", views.pfas),
-    path("pkb/", views.pkb),
-    path("cmd/", views.cmd),
     path('', views.index),
 ]
 

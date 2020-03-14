@@ -16,21 +16,7 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 
 
 def index(request):
-    # method 1
-    # t = loader.get_template('test.html')
-    # return HttpResponse(t.render({'name': 123}))
-
-    # method 2    (Template and Context should use together)
-    # t = Template('{{name}}')
-    # c = Context({'name': 123})
-    # return HttpResponse(t.render(c))
-
     t = loader.get_template('index.html')
-    return HttpResponse(t.render())
-
-
-def course(request):
-    t = loader.get_template('superHTML.html')
     return HttpResponse(t.render())
 
 
@@ -83,27 +69,6 @@ def submit(request):
     return HttpResponse(t.render({'status': statusmessage, 'name': name, 'email': email, 'message': message}))
 
 
-def cmd(request):
-    if request.method == "GET":
-        return render(request, 'cmd.html')
-    elif request.method == "POST":
-        input = request.POST.get('input')
-        result_eval = lambda x: eval(x)
-        result_output = ""
-        try:
-            result_output = result_eval(input)
-        except Exception:
-            result_output = "please enter correct Python instruction"
-        return render(request, 'cmd.html', {'input': input, 'output': result_output})
-
-
-def pkb(request):
-    # a1 = {'title': 'python basic', 'p1': 'regex'}
-    # models.forum.objects.create(**a1)
-    article = models.forum.objects.get(id=1)
-    return render(request, 'pkb.html', {'article': article})
-
-
 @xframe_options_exempt
 def pfas(request):
     localtime = fa.gettime()
@@ -121,11 +86,11 @@ def webDev(request):
     return HttpResponse(t.render())
 
 
-def quickatt(request):
-    t = loader.get_template('quickatt.html')
+def pythonspec(request):
+    t = loader.get_template('PythonSpec.html')
     return HttpResponse(t.render())
 
 
-def pythonspec(request):
-    t = loader.get_template('PythonSpec.html')
+def course(request):
+    t = loader.get_template('superHTML.html')
     return HttpResponse(t.render())
