@@ -94,3 +94,10 @@ def pythonspec(request):
 def course(request):
     t = loader.get_template('superHTML.html')
     return HttpResponse(t.render())
+
+
+def pkb(request):
+    # a1 = {'title': 'python basic', 'p1': 'regex'}
+    # models.forum.objects.create(**a1)
+    article = models.forum.objects.get(id=1)
+    return render(request, 'pkb.html', {'article': article})

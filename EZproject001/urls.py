@@ -32,6 +32,7 @@ urlpatterns = [
     path('course/', views.course),
     path("submit/", views.submit),
     path("pfas/", views.pfas),
+    path("pkb/", views.pkb),
     path('', views.index),
 ]
 
