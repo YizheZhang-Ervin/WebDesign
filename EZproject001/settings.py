@@ -31,7 +31,7 @@ SECRET_KEY = 'wxj1e0!5vbx6(8j*@x6_uwh@t*+pqrc$oq_(xfp!!umy_55-!%'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['ervinzhang.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*', '127.0.0.1']
 
 # Application definition
 
@@ -79,22 +79,6 @@ WSGI_APPLICATION = 'EZproject001.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': 3306,
-    #     'NAME': 'djangodb',
-    #     'USER': 'root',
-    #     'PASSWORD': 'root001',
-    # },
-    'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'HOST': 'ErvinZhang.mysql.pythonanywhere-services.com',
-            'PORT': 3306,
-            'NAME': 'ErvinZhang$djangodb',
-            'USER': 'ErvinZhang',
-            'PASSWORD': 'rootroot',
-        },
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -146,14 +130,3 @@ else:
         # ("img", os.path.join(STATIC_ROOT, 'img')),
         os.path.join(BASE_DIR, 'static'),
     ]
-
-# email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_SSL = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'zhang_yz168@qq.com'
-# EMAIL_HOST_PASSWORD = 'iuiiueffnagbbhgf'
-EMAIL_HOST_USER = 'ervinzhang319@gmail.com'
-EMAIL_HOST_PASSWORD = 'qmieirzpldvvsgct'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

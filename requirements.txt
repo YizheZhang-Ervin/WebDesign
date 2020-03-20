@@ -5,6 +5,7 @@ chardet==3.0.4
 cryptography==2.8
 cycler==0.10.0
 Django==3.0.3
+djangorestframework==3.11.0
 idna==2.9
 inflection==0.3.1
 kiwisolver==1.1.0
