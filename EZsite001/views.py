@@ -60,12 +60,12 @@ def submit(request):
     #                 message='Name:' + str(name) + '\n' + 'Email:' + str(email) + '\n' + 'Message:' + str(message),
     #                 from_email='ervinzhang319@gmail.com', recipient_list=['ervinzhang319@gmail.com'],
     #                 fail_silently=False)
-    res = 1
+    res = 0
     if res == 1:
         statusmessage = "Succeed!"
-        messages.success(request, statusmessage)
+        # messages.success(request, statusmessage)
     else:
-        statusmessage = "Oops! Something wrong with internet or other reasons"
+        statusmessage = "Oops! This module is not in service. Please contact by Blog/Email/Linkedin/Github."
     t = loader.get_template('submit.html')
     return HttpResponse(t.render({'status': statusmessage, 'name': name, 'email': email, 'message': message}))
 
