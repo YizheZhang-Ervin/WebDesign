@@ -52,21 +52,21 @@ def resume_cn(request):
 
 
 def submit(request):
-    name = request.session['name']
-    email = request.session['email']
-    message = request.session['message']
-    # res = send_mail(subject='Contact By My website: ' + name + '<' + email + '>',
-    #                 message='Name:' + str(name) + '\n' + 'Email:' + str(email) + '\n' + 'Message:' + str(message),
-    #                 from_email='ervinzhang319@gmail.com', recipient_list=['ervinzhang319@gmail.com'],
-    #                 fail_silently=False)
-    res = 0
-    if res == 1:
-        statusmessage = "Succeed!"
-        # messages.success(request, statusmessage)
-    else:
-        statusmessage = "Oops! This module is not in service. Please contact by Blog/Email/Linkedin/Github."
-    t = loader.get_template('submit.html')
-    return HttpResponse(t.render({'status': statusmessage, 'name': name, 'email': email, 'message': message}))
+    # name = request.session['name']
+    # email = request.session['email']
+    # message = request.session['message']
+    # # res = send_mail(subject='Contact By My website: ' + name + '<' + email + '>',
+    # #                 message='Name:' + str(name) + '\n' + 'Email:' + str(email) + '\n' + 'Message:' + str(message),
+    # #                 from_email='ervinzhang319@gmail.com', recipient_list=['ervinzhang319@gmail.com'],
+    # #                 fail_silently=False)
+    # if res == 1:
+    #     statusmessage = "Succeed!"
+    #     # messages.success(request, statusmessage)
+    # else:
+    #     statusmessage = "Oops! This module is not in service. Please contact by Blog/Email/Linkedin/Github."
+    # t = loader.get_template('submit.html')
+    # return HttpResponse(t.render({'status': statusmessage, 'name': name, 'email': email, 'message': message}))
+    return redirect('/')
 
 
 @xframe_options_exempt
@@ -79,7 +79,7 @@ def pfas(request):
     # goldpricedate, currentdata = fa.getcurrentdata()
     # return render(request, 'pfas.html',
     #               {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata})
-    return redirect('https://ervinzhang.pythonanywhere.com')
+    return redirect('/')
 
 
 def webDev(request):
@@ -100,5 +100,6 @@ def course(request):
 def pkb(request):
     # a1 = {'title': 'python basic', 'p1': 'regex'}
     # models.forum.objects.create(**a1)
-    article = models.forum.objects.get(id=1)
-    return render(request, 'pkb.html', {'article': article})
+    # article = models.forum.objects.get(id=1)
+    # return render(request, 'pkb.html', {'article': article})
+    return redirect('/')
