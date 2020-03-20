@@ -16,8 +16,7 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 
 
 def index(request):
-    t = loader.get_template('index.html')
-    return HttpResponse(t.render())
+    return render(request, 'index.html')
 
 
 def resume_en(request):
@@ -72,14 +71,15 @@ def submit(request):
 
 @xframe_options_exempt
 def pfas(request):
-    localtime = fa.gettime()
-    pwd = os.path.dirname(os.path.dirname(__file__))
-    today_file = pwd + '/static/pfas/img/' + localtime + '.png'
-    if not os.path.exists(today_file):
-        status = fa.gethistorydata()
-    goldpricedate, currentdata = fa.getcurrentdata()
-    return render(request, 'pfas.html',
-                  {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata})
+    # localtime = fa.gettime()
+    # pwd = os.path.dirname(os.path.dirname(__file__))
+    # today_file = pwd + '/static/pfas/img/' + localtime + '.png'
+    # if not os.path.exists(today_file):
+    #     status = fa.gethistorydata()
+    # goldpricedate, currentdata = fa.getcurrentdata()
+    # return render(request, 'pfas.html',
+    #               {'localtime': localtime, 'goldpricedate': goldpricedate, 'currentdata': currentdata})
+    return redirect('https://ervinzhang.pythonanywhere.com')
 
 
 def webDev(request):
