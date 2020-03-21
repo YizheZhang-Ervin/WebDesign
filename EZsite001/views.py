@@ -93,8 +93,9 @@ def pythonspec(request):
 
 
 def course(request):
-    t = loader.get_template('superHTML.html')
-    return HttpResponse(t.render())
+    # t = loader.get_template('superHTML.html')
+    # return HttpResponse(t.render())
+    return redirect('/')
 
 
 def pkb(request):
